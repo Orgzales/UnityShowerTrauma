@@ -8,5 +8,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 
 ## Plans To Do
 # Phase one: 
- - Organize project
+ - 🗸 Organize project
+ - 🗸 Create Default FPS Controller 
  - Create default scene for template
+	- 🗸 Make layout for bathroom
+	- Make doors, vents, walls, and roof
+	- Create blocks for testing now
