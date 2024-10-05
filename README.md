@@ -5,3 +5,8 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 - Psychological Horror: The game focuses on the mental strain of a abused child. As the trauma intensifies, hallucinations blur the line between what is real and imagined.
 - Randomized Encounters: Every time you enter the shower, the layout, enemies, and challenges are different, keeping the you on edge.
 - Progressive Fear: Over time, the child’s trauma intensifies, and the dangers become more severe, with deeper mysteries to unravel about the origin of their fear.
+
+## Plans To Do
+# Phase one: 
+ - Organize project
+ - Create default scene for template
