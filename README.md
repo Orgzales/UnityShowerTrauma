@@ -7,10 +7,17 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 - Progressive Fear: Over time, the child’s trauma intensifies, and the dangers become more severe, with deeper mysteries to unravel about the origin of their fear.
 
 ## Plans To Do
-# Phase one: 
+
+# Step 1: 
  - 🗸 Organize project
  - 🗸 Create Default FPS Controller 
- - Create default scene for template
+ - 🗸 Create default scene for template
 	- 🗸 Make layout for bathroom
-	- Make doors, vents, walls, and roof
-	- Create blocks for testing now
+	- 🗸  Make doors, vents, walls, and roof
+	- 🗸  Create blocks for testing now
+# Step 2:
+- Create Script for Blink mechanic
+	- Make object overlay for pressing "E"
+	- Player screen should go black for a minute 
+	- Create UI for "Press E to wash Face" 
+	
