@@ -4,43 +4,82 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    public GameObject ShowerBounds;
+    public float DirtyMeterValue = 100.0f;
+    public float DirtyMeterRate = 0.1f; //Down
 
+    public float InsanityMeterValue = 0.0f;
+    public float InsanityMeterRate = 1.0f; //Up
 
-    public float DirtyMeter = 10.0f;
-    public float DirtyMeterDecreaseRate = 1.0f;
-
-    public float InstanityMeter = 0.0f;
-    public float InstanityMeterIncreaseRate = 0.1f;
-
-    void Start()
-    {
-        StartDecreaseDirtyMeter();
-    }
+    private bool ShowerStarted = false;
+    private bool IsInsideShower = false;
+    private Coroutine countdownCoroutine;
 
     void Update()
     {
-
-    }
-
-    //make a function that will decrease the dirty meter by dirtyMeterDecreaseRate every second
-    public void DecreaseDirtyMeter()
-    {
-        DirtyMeter -= DirtyMeterDecreaseRate;
-        Debug.Log("Dirty Meter: " + DirtyMeter);
-        if (DirtyMeter <= 0)
+        if (ShowerStarted && !IsInsideShower) //If the player is outside the shower
         {
-            //end the day and stop the decrease of the dirty meter
-            CancelInvoke("DecreaseDirtyMeter");
-            Debug.Log("End of the day");
+            DirtyMeterValue += DirtyMeterRate * Time.deltaTime; //You get more dirty
+
+            if (DirtyMeterValue > 200f)
+            {
+                DirtyMeterValue = 200f; //Max Dirty
+            }
+
+            Debug.Log("Countdown Value (Outside): " + DirtyMeterValue);
         }
     }
 
-    //call DecreaseDirtyMeter every 2 seconds
-    public void StartDecreaseDirtyMeter()
+    private void OnTriggerEnter(Collider Shower)
     {
-        InvokeRepeating("DecreaseDirtyMeter", 0.0f, 2.0f);
+        if (Shower.CompareTag("Player"))
+        {
+            IsInsideShower = true;
+            if (!ShowerStarted) //starts the shower here
+            {
+                ShowerStarted = true;
+                countdownCoroutine = StartCoroutine(Countdown());
+                Debug.Log("Countdown started.");
+            }
+        }
     }
 
+    private void OnTriggerExit(Collider Shower)
+    {
+        if (Shower.CompareTag("Player"))
+        {
+            IsInsideShower = false;
+            Debug.Log("Player exited boundary.");
+
+            if (countdownCoroutine != null)
+            {
+                StopCoroutine(countdownCoroutine);
+                countdownCoroutine = null;
+            }
+        }
+    }
+
+    private IEnumerator Countdown()
+    {
+
+        while (IsInsideShower)// while inside the shower you get clean
+        {
+            if (DirtyMeterValue < 100)
+            {
+                DirtyMeterValue -= 1f;
+
+                if (DirtyMeterValue < 0f)
+                {
+                    DirtyMeterValue = 0f;
+                }
+
+                Debug.Log("Countdown Value (Inside): " + DirtyMeterValue);
+            }
+
+            // Wait for 1 second 
+            yield return new WaitForSeconds(1f);
+        }
+    }
 
 
 }
