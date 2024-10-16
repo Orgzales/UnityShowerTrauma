@@ -5,11 +5,13 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public GameObject ShowerBounds;
-    public float DirtyMeterValue = 100.0f;
-    public float DirtyMeterRate = 1.0f; //Down
+    public float DirtyMeterValue = 100f;
 
-    public float InsanityMeterValue = 0.0f;
-    public float InsanityMeterRate = 0.2f; //Up
+    public float CleanRate = 0.5f; //Down: Getting clean
+    public float DirtyRate = 0.1f; //UP : getting dirty
+
+    public float InsanityMeterValue = 0f;
+    public float InsaneRate = 0.2f; //Up
 
     private bool ShowerStarted = false;
     private bool IsInsideShower = false;
@@ -18,7 +20,9 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-
+        //log the dirty meter value and rate
+        Debug.Log(DirtyMeterValue);
+        Debug.Log($"{CleanRate:F2}");
     }
 
     private void OnTriggerEnter(Collider Shower)
@@ -36,7 +40,7 @@ public class EventManager : MonoBehaviour
                 StopCoroutine(countupCoroutine);
                 Debug.Log("Getting More Dirty stopped.");
             }
-            Debug.Log("Getting Clean and insane started.");
+            Debug.Log($"Getting Clean and insane started.");
             // }
         }
     }
@@ -64,22 +68,22 @@ public class EventManager : MonoBehaviour
         {
             if (DirtyMeterValue > 0)
             {
-                DirtyMeterValue -= DirtyMeterRate;
+                DirtyMeterValue -= CleanRate;
                 if (DirtyMeterValue < 0f)
                 {
                     DirtyMeterValue = 0f;
                 }
-                Debug.Log("Dirty Value (Inside): " + DirtyMeterValue);
+                Debug.Log($"[IN SHOWER] Dirty Value: {DirtyMeterValue:F2}");
             }
 
             if (InsanityMeterValue < 200)
             {
-                InsanityMeterValue += InsanityMeterRate;
+                InsanityMeterValue += InsaneRate;
                 if (InsanityMeterValue < 0f)
                 {
                     InsanityMeterValue = 0f;
                 }
-                Debug.Log("Insanity Value (Inside): " + InsanityMeterValue);
+                Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
             }
 
             // Wait for 1 second 
@@ -94,14 +98,14 @@ public class EventManager : MonoBehaviour
         {
             if (DirtyMeterValue < 200)
             {
-                DirtyMeterValue += DirtyMeterRate;
+                DirtyMeterValue += DirtyRate;
 
                 if (DirtyMeterValue < 0f)
                 {
                     DirtyMeterValue = 0f;
                 }
 
-                Debug.Log("Dirty Value (Outside): " + DirtyMeterValue);
+                Debug.Log($"[OUT SHOWER] Dirty Value: {DirtyMeterValue:F2}");
             }
 
             // Wait for 1 second 
