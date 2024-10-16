@@ -16,6 +16,19 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- 🗸  Make doors, vents, walls, and roof
 	- 🗸  Create blocks for testing now
 # Step 2:
+- Create Event manager Script
+	- Dirty and Instanity bar
+		- When in shower the dirty bar decreases 
+		- When in bathroom Instanity bar rises, Only when the shower started
+		- When out of shower, dirty increases 
+	- Washing face decreases the Dirty bar rapidly but increases the chance for somethine to happen 
+		- Make invisble colliders:
+			- Enter shower area 
+			- Washing face to press Each
+			- Turning the shower on/off
+	-Debug everything for logs 
+	
+# Step 3:
 - Create Script for Blink mechanic
 	- Make object overlay for pressing "E"
 	- Player screen should go black for a minute 
