@@ -6,28 +6,19 @@ public class EventManager : MonoBehaviour
 {
     public GameObject ShowerBounds;
     public float DirtyMeterValue = 100.0f;
-    public float DirtyMeterRate = 0.1f; //Down
+    public float DirtyMeterRate = 1.0f; //Down
 
     public float InsanityMeterValue = 0.0f;
-    public float InsanityMeterRate = 1.0f; //Up
+    public float InsanityMeterRate = 0.2f; //Up
 
     private bool ShowerStarted = false;
     private bool IsInsideShower = false;
     private Coroutine countdownCoroutine;
+    private Coroutine countupCoroutine;
 
     void Update()
     {
-        if (ShowerStarted && !IsInsideShower) //If the player is outside the shower
-        {
-            DirtyMeterValue += DirtyMeterRate * Time.deltaTime; //You get more dirty
 
-            if (DirtyMeterValue > 200f)
-            {
-                DirtyMeterValue = 200f; //Max Dirty
-            }
-
-            Debug.Log("Countdown Value (Outside): " + DirtyMeterValue);
-        }
     }
 
     private void OnTriggerEnter(Collider Shower)
@@ -35,12 +26,18 @@ public class EventManager : MonoBehaviour
         if (Shower.CompareTag("Player"))
         {
             IsInsideShower = true;
-            if (!ShowerStarted) //starts the shower here
+            Debug.Log("Player entered Shower.");
+            // if (!ShowerStarted) //starts the shower here
+            // {
+            ShowerStarted = true;
+            countdownCoroutine = StartCoroutine(Countdown());
+            if (countupCoroutine != null)
             {
-                ShowerStarted = true;
-                countdownCoroutine = StartCoroutine(Countdown());
-                Debug.Log("Countdown started.");
+                StopCoroutine(countupCoroutine);
+                Debug.Log("Getting More Dirty stopped.");
             }
+            Debug.Log("Getting Clean and insane started.");
+            // }
         }
     }
 
@@ -49,12 +46,13 @@ public class EventManager : MonoBehaviour
         if (Shower.CompareTag("Player"))
         {
             IsInsideShower = false;
-            Debug.Log("Player exited boundary.");
+            Debug.Log("Player exited Shower.");
 
             if (countdownCoroutine != null)
             {
                 StopCoroutine(countdownCoroutine);
-                countdownCoroutine = null;
+                countupCoroutine = StartCoroutine(CountUp());
+                // countdownCoroutine = null;
             }
         }
     }
@@ -62,18 +60,48 @@ public class EventManager : MonoBehaviour
     private IEnumerator Countdown()
     {
 
-        while (IsInsideShower)// while inside the shower you get clean
+        while (IsInsideShower)// while inside the shower you get clean but go more insane 
         {
-            if (DirtyMeterValue < 100)
+            if (DirtyMeterValue > 0)
             {
-                DirtyMeterValue -= 1f;
+                DirtyMeterValue -= DirtyMeterRate;
+                if (DirtyMeterValue < 0f)
+                {
+                    DirtyMeterValue = 0f;
+                }
+                Debug.Log("Dirty Value (Inside): " + DirtyMeterValue);
+            }
+
+            if (InsanityMeterValue < 200)
+            {
+                InsanityMeterValue += InsanityMeterRate;
+                if (InsanityMeterValue < 0f)
+                {
+                    InsanityMeterValue = 0f;
+                }
+                Debug.Log("Insanity Value (Inside): " + InsanityMeterValue);
+            }
+
+            // Wait for 1 second 
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    private IEnumerator CountUp()
+    {
+
+        while (!IsInsideShower)// while Outside the shower you get Dirty
+        {
+            if (DirtyMeterValue < 200)
+            {
+                DirtyMeterValue += DirtyMeterRate;
 
                 if (DirtyMeterValue < 0f)
                 {
                     DirtyMeterValue = 0f;
                 }
 
-                Debug.Log("Countdown Value (Inside): " + DirtyMeterValue);
+                Debug.Log("Dirty Value (Outside): " + DirtyMeterValue);
             }
 
             // Wait for 1 second 
