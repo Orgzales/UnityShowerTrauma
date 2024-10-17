@@ -20,9 +20,7 @@ public class EventManager : MonoBehaviour
 
     void Update()
     {
-        //log the dirty meter value and rate
-        Debug.Log(DirtyMeterValue);
-        Debug.Log($"{CleanRate:F2}");
+
     }
 
     private void OnTriggerEnter(Collider Shower)
