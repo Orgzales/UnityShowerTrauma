@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteratableManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    Outline Outline;
+    public string Message;
+
+    public UnityEvent onInteraction;
+
     void Start()
     {
-        
+        Outline = GetComponent<Outline>();
+        DisableOutline();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        onInteraction.Invoke();
     }
+
+    public void DisableOutline()
+    {
+        Outline.enabled = false;
+    }
+
+    public void EnableOutline()
+    {
+        Outline.enabled = true;
+    }
+
 }
