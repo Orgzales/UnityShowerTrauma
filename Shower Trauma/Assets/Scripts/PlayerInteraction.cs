@@ -44,6 +44,10 @@ public class PlayerInteraction : MonoBehaviour
                     DisableCurrentInteractable();
                 }
             }
+            else //if nothing in reach
+            {
+                DisableCurrentInteractable();
+            }
         }
         else //if nothing in reach
         {
@@ -55,10 +59,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         CurrentInteractable = NewInteractable;
         CurrentInteractable.EnableOutline();
+        HudController.Instance.EnableInteractionText(CurrentInteractable.Message);
     }
 
     void DisableCurrentInteractable()
     {
+        HudController.Instance.DisableInteractionText();
         if (CurrentInteractable != null)
         {
             CurrentInteractable.DisableOutline();
