@@ -10,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckInteraction();
         if (Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
         {
             CurrentInteractable.Interact();
@@ -21,9 +22,47 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
-        if (Physics.Raycast(ray, out hit, PlayerReach)) //player looking at interabtable 
+        if (Physics.Raycast(ray, out hit, PlayerReach)) //player looking at interactable 
         {
-            InteractableManager newInteractable = hit.collider.GetComponent<InteractableManager>();
+            InteractableManager NewInteractable = hit.collider.GetComponent<InteractableManager>();
+
+            //if there is a current interactable and is not the new interactable
+            if (CurrentInteractable != null && CurrentInteractable != NewInteractable)
+            {
+                CurrentInteractable.DisableOutline();
+            }
+
+            if (NewInteractable != null)
+            {
+                //outline new interactable
+                if (NewInteractable.enabled)
+                {
+                    SetNewCurrentInteractable(NewInteractable);
+                }
+                else //if interactable is not enabled
+                {
+                    DisableCurrentInteractable();
+                }
+            }
+        }
+        else //if nothing in reach
+        {
+            DisableCurrentInteractable();
+        }
+    }
+
+    void SetNewCurrentInteractable(InteractableManager NewInteractable)
+    {
+        CurrentInteractable = NewInteractable;
+        CurrentInteractable.EnableOutline();
+    }
+
+    void DisableCurrentInteractable()
+    {
+        if (CurrentInteractable != null)
+        {
+            CurrentInteractable.DisableOutline();
+            CurrentInteractable = null;
         }
     }
 

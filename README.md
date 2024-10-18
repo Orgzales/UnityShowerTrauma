@@ -30,7 +30,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 # Step 3:
 - Make Interatiable system
 	- 🗸 Make a hud with dot in middle for now
-	- Whenever player looks at interactable object, display hud text
+	- Whenever player looks at interactable object, display hud text and outline
 	- Each object will have a script object 
 		- When pressing shower, should wash face for step 4
 		- When looking at shower, should turn on/off 

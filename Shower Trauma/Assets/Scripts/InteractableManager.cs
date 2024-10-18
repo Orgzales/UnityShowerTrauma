@@ -6,14 +6,14 @@ using UnityEngine.Events;
 public class InteractableManager : MonoBehaviour
 {
 
-    Outline Outline;
+    Outline OutlineScript;
     public string Message;
 
     public UnityEvent onInteraction;
 
     void Start()
     {
-        Outline = GetComponent<Outline>();
+        OutlineScript = GetComponent<Outline>();
         DisableOutline();
     }
 
@@ -24,12 +24,12 @@ public class InteractableManager : MonoBehaviour
 
     public void DisableOutline()
     {
-        Outline.enabled = false;
+        OutlineScript.enabled = false;
     }
 
     public void EnableOutline()
     {
-        Outline.enabled = true;
+        OutlineScript.enabled = true;
     }
 
 }
