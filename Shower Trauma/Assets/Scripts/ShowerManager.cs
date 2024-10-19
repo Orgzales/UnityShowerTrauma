@@ -19,6 +19,8 @@ public class ShowerManager : MonoBehaviour
     private Coroutine countdownCoroutine;
     private Coroutine countupCoroutine;
 
+    public GameObject ShowerHeadCollider;
+
 
     void Update()
     {
@@ -131,6 +133,24 @@ public class ShowerManager : MonoBehaviour
             IsShowerOn = true;
             Debug.Log("Shower Turned On");
         }
+    }
+
+    public void EnabledWashingFace()
+    {
+        if (IsShowerOn)
+        {
+            ShowerHeadCollider.SetActive(true);
+        }
+        else
+        {
+            ShowerHeadCollider.SetActive(false);
+        }
+    }
+    public void WashingFace()
+    {
+        DirtyMeterValue -= 20f;
+        InsanityMeterValue += 20f;
+        Debug.Log("After Wash Value: " + DirtyMeterValue);
     }
 
 
