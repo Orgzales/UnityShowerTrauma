@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventManager : MonoBehaviour
+public class ShowerManager : MonoBehaviour
 {
     public GameObject ShowerBounds;
     public float DirtyMeterValue = 100f;
@@ -18,7 +18,6 @@ public class EventManager : MonoBehaviour
     public bool IsShowerOn = false;
     private Coroutine countdownCoroutine;
     private Coroutine countupCoroutine;
-
 
 
     void Update()
@@ -133,5 +132,6 @@ public class EventManager : MonoBehaviour
             Debug.Log("Shower Turned On");
         }
     }
+
 
 }
