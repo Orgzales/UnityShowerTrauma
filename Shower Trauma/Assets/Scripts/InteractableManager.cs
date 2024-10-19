@@ -32,4 +32,31 @@ public class InteractableManager : MonoBehaviour
         OutlineScript.enabled = true;
     }
 
+
+    ///  INTERACTIONS CALLS 
+
+
+    private bool ShowerIsOn = false;
+
+    public void TurnShowerOnOff()
+    {
+        if (ShowerIsOn)
+        {
+            ShowerIsOn = false;
+            Debug.Log("Shower Turned Off");
+        }
+        else
+        {
+            ShowerIsOn = true;
+            Debug.Log("Shower Turned On");
+        }
+    }
+
+
+    public void WashFace()
+    {
+        Debug.Log("Washing Face");
+    }
+
+
 }

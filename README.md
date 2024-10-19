@@ -21,19 +21,19 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- 🗸 When in shower the dirty bar decreases 
 		- 🗸 When in bathroom Instanity bar rises, Only when the shower started
 		- 🗸 When out of shower, dirty increases 
-	- Washing face decreases the Dirty bar rapidly but increases the chance for somethine to happen 
+	- 🗸 Washing face decreases the Dirty bar rapidly but increases the chance for somethine to happen 
 		- 🗸 Make invisble colliders:
 			- 🗸 Enter shower area 
 			- 🗸 Washing face to press Each
 			- 🗸 Turning the shower on/off
-	-Debug everything for logs 
+	- 🗸 Debug everything for logs 
 # Step 3:
 - Make Interatiable system
 	- 🗸 Make a hud with dot in middle for now
 	- 🗸 Whenever player looks at interactable object, display hud text and outline
-	- Each object will have a script object 
-		- When pressing shower, should wash face for step 4
-		- When looking at shower, should turn on/off 
+	- 🗸 Each object will have a script object 
+		- 🗸 When pressing shower, should wash face for step 4
+		- 🗸 When looking at shower, should turn on/off 
 			- This will start the cleaning count down 
 	
 # Step 4:

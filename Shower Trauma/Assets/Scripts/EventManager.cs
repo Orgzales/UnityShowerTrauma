@@ -71,7 +71,7 @@ public class EventManager : MonoBehaviour
                 {
                     DirtyMeterValue = 0f;
                 }
-                Debug.Log($"[IN SHOWER] Dirty Value: {DirtyMeterValue:F2}");
+                // Debug.Log($"[IN SHOWER] Dirty Value: {DirtyMeterValue:F2}");
             }
 
             if (InsanityMeterValue < 200)
@@ -81,7 +81,7 @@ public class EventManager : MonoBehaviour
                 {
                     InsanityMeterValue = 0f;
                 }
-                Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
+                // Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
             }
 
             // Wait for 1 second 
@@ -103,7 +103,7 @@ public class EventManager : MonoBehaviour
                     DirtyMeterValue = 0f;
                 }
 
-                Debug.Log($"[OUT SHOWER] Dirty Value: {DirtyMeterValue:F2}");
+                // Debug.Log($"[OUT SHOWER] Dirty Value: {DirtyMeterValue:F2}");
             }
 
             // Wait for 1 second 
