@@ -38,7 +38,30 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	
 # Step 4:
 - Create Script for Blink mechanic
-	- Make object overlay for pressing "E"
+	- 🗸 Make object overlay for pressing "E"
 	- Player screen should go black for a minute 
-	- Create UI for "Press E to wash Face" 
-	
+	- 🗸 Create UI for "Press E to wash Face" 
+- When washing face, random events have a chance of happening
+	- Based off of insane level
+	- Instance Events (low)
+		- Creppy jumpscares
+		- Hidden monsters that run when looked at
+		- Sound events 
+	- Interactable Events (Medium)
+		- Monsters that need to hid from
+		- Need to mash a button to not die
+		- Turning shower off/On to survive
+	- Level Changing Events (High)
+		- Moving into a different area through closets 
+		- Getting transfer to a whole new area for a events
+		- Monsters that need to be constantly monitored 
+
+# Step 5:
+- Create anitmations + Interactable for objects:
+	- 4 Doors (Closets, back door, side door) (Opening/Closing) 
+	- Sink cabnets (Opening/Closing) 
+	- Shower Head (make it shower)
+		- Shower controls (hot & Cold)
+	- toilet (to flush)
+	- Sink Faucet (on/off)
+	- Light Switch (on/off)
