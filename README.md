@@ -34,7 +34,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- 🗸 Each object will have a script object 
 		- 🗸 When pressing shower, should wash face for step 4
 		- 🗸 When looking at shower, should turn on/off 
-			- This will start the cleaning count down 
+			- 🗸 This will start the cleaning count down 
 	
 # Step 4:
 - Create Script for Blink mechanic
