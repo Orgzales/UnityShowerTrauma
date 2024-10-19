@@ -6,14 +6,26 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float PlayerReach = 3f;
     InteractableManager CurrentInteractable; //script InteractableManager
+    FPS_Contoller PlayerController; //script FPS_Contoller
 
+    public GameObject WashFaceUI; //testing for now w/ Black image
+    public bool IsWashingFace = false;
     // Update is called once per frame
+
+    void Start()
+    {
+        PlayerController = GetComponent<FPS_Contoller>();
+    }
+
     void Update()
     {
         CheckInteraction();
-        if (Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
+        if (!IsWashingFace)
         {
-            CurrentInteractable.Interact();
+            if (Input.GetKeyDown(KeyCode.E) && CurrentInteractable != null)
+            {
+                CurrentInteractable.Interact();
+            }
         }
     }
 
@@ -71,5 +83,27 @@ public class PlayerInteraction : MonoBehaviour
             CurrentInteractable = null;
         }
     }
+
+    public void WashFace()
+    {
+        Debug.Log("Washing Face");
+        StartCoroutine(WashFaceRoutine());
+    }
+    private IEnumerator WashFaceRoutine()
+    {
+        WashFaceUI.gameObject.SetActive(true);
+        PlayerController.moveSpeed = 0f;
+        PlayerController.lookSpeed = 0f;
+        PlayerController.jumpForce = 0f;
+        IsWashingFace = true;
+        yield return new WaitForSeconds(2f);
+        WashFaceUI.gameObject.SetActive(false);
+        PlayerController.moveSpeed = 5f;
+        PlayerController.lookSpeed = 2f;
+        PlayerController.jumpForce = 5f;
+        IsWashingFace = false;
+        StopCoroutine(WashFaceRoutine());
+    }
+
 
 }

@@ -53,10 +53,10 @@ public class InteractableManager : MonoBehaviour
     }
 
 
-    public void WashFace()
-    {
-        Debug.Log("Washing Face");
-    }
+    // public void WashFace()
+    // {
+    //     Debug.Log("Washing Face");
+    // }
 
 
 }

@@ -13,8 +13,6 @@ public class FPS_Contoller : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
 
-    public GameObject WashFaceUI; //testing for now w/ Black image
-
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -71,20 +69,8 @@ public class FPS_Contoller : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(playerCamera.transform.localEulerAngles.x - mouseY, 0, 0);
         }
 
-
     }
 
-    public void WashFace()
-    {
-        StartCoroutine(WashFaceRoutine());
-    }
-    private IEnumerator WashFaceRoutine()
-    {
-        WashFaceUI.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        WashFaceUI.gameObject.SetActive(false);
-        StopCoroutine(WashFaceRoutine());
-    }
 
 
 
