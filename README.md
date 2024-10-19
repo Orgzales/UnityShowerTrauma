@@ -41,9 +41,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- 🗸 Make object overlay for pressing "E"
 	- 🗸 Player screen should go black for a minute 
 	- 🗸 Create UI for "Press E to wash Face" 
-- Washing face should decrease dirty level
-	- Only able to do it if the shower is on
-	- Decrese by 20 for now 
+- 🗸 Washing face should decrease dirty level
+	- 🗸 Only able to do it if the shower is on
+	- 🗸 Decrese by 20 for now 
 - When washing face, random events have a chance of happening
 	- Based off of insane level
 	- Instance Events (low)
