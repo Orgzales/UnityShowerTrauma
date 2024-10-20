@@ -61,7 +61,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 
 # Step 5:
 - Create anitmations + Interactable for objects:
-	- 4 Doors (Closets, back door, side door) (Opening/Closing) 
+	- 🗸 4 Doors (Closets, back door, side door) (Opening/Closing) 
 	- Sink cabnets (Opening/Closing) 
 	- Shower Head (make it shower)
 		- Shower controls (hot & Cold)

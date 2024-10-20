@@ -52,11 +52,25 @@ public class InteractableManager : MonoBehaviour
         }
     }
 
+    Animator DoorAnimator;
+    private bool DoorIsOpen = false;
+    public void OpenCloseDoor()
+    {
+        DoorAnimator = GetComponent<Animator>();
+        if (DoorIsOpen)
+        {
+            DoorIsOpen = false;
+            DoorAnimator.Play("DoorClose", 0, 0.0f);
+            Debug.Log("Door Closed");
+        }
+        else
+        {
+            DoorIsOpen = true;
+            DoorAnimator.Play("DoorOpen", 0, 0.0f);
+            Debug.Log("Door Opened");
+        }
 
-    // public void WashFace()
-    // {
-    //     Debug.Log("Washing Face");
-    // }
+    }
 
 
 }
