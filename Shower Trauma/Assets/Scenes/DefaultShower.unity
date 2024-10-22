@@ -697,6 +697,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7544045342114265212}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: DoesEventHappen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1980288231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1155,18 @@ MonoBehaviour:
   InsaneRate: 0.2
   IsShowerOn: 0
   ShowerHeadCollider: {fileID: 1144217830}
+--- !u!114 &7544045342114265212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544045342114265210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2405097e9406284419e02110ea31a1fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8174066229983705250
 PrefabInstance:
   m_ObjectHideFlags: 0

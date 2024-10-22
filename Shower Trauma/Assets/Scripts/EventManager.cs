@@ -20,28 +20,13 @@ public class EventManager : MonoBehaviour
 
     public void DoesEventHappen() //more insane and more down the week causes more events to happen
     {
-        InsaneAmount = ShowerManagerScript.InsanityMeterValue;
+        float floatInsaneAmount = ShowerManagerScript.InsanityMeterValue;
         //get the # Days 1-7 week 
         int Day = 2; //TESTING
-        int RandomNumber = Random.Range(1, 10);
-        if (Day >= RandomNumber)
+        float RandomNumber = Random.Range(1f, 100f);
+        if (RandomNumber <= floatInsaneAmount + Day)
         {
-            if (InsaneAmount >= 25f)
-            {
-                InstanceEvent();
-            }
-            else if (InsaneAmount >= 50f)
-            {
-                SmallEvent();
-            }
-            else if (InsaneAmount >= 75f)
-            {
-                BigEvent();
-            }
-            else if (InsaneAmount >= 100f)
-            {
-                LevelChangingEvent();
-            }
+            GetEventLevel();
         }
 
     }
@@ -49,29 +34,44 @@ public class EventManager : MonoBehaviour
 
     public void GetEventLevel() //severaity of the event based on dirty value and Day [later]
     {
-        Dirty_Amount = ShowerManagerScript.DirtyMeterValue;
-
+        float Dirty_Amount = ShowerManagerScript.DirtyMeterValue;
+        if (Dirty_Amount >= 25f) //
+        {
+            InstanceEvent();
+        }
+        else if (Dirty_Amount >= 50f)
+        {
+            SmallEvent();
+        }
+        else if (Dirty_Amount >= 75f)
+        {
+            BigEvent();
+        }
+        else if (Dirty_Amount >= 100f)
+        {
+            LevelChangingEvent();
+        }
 
     }
 
     public void InstanceEvent() //Small Jumpscare or Creapy Quick Event
     {
-
+        Debug.Log("Instance Event Happened");
     }
 
     public void SmallEvent() //small encounter, 1 click or look away
     {
-
+        Debug.Log("Small Event Happened");
     }
 
     public void BigEvent() //Big Encounter, Near Death or Death
     {
-
+        Debug.Log("Big Event Happened");
     }
 
     public void LevelChangingEvent() //Event that changes the level
     {
-
+        Debug.Log("Level Changing Event Happened");
     }
 
 
