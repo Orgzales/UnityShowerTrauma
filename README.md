@@ -68,3 +68,11 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- toilet (to flush)
 	- Sink Faucet (on/off)
 	- Light Switch (on/off)
+	
+# Step 6:
+- Make classes:
+	- Plumber (Good with Pipes and Bathroom Tools)
+	- Alchemist (Makes potions out of shampoos and other chemicals )
+	- Mentalist (one with the mind to fight off evils)
+	- Pharmacist (Understand the Meds/Drugs and medical equipment) 
+	
