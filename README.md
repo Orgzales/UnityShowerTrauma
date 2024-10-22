@@ -60,6 +60,23 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- Monsters that need to be constantly monitored 
 
 # Step 5:
+- Create Advance Dirty and Insane Bar
+	- Dirty Bar:
+		- Start at 100f, min is 0f, max is 200f
+		- Every 25 percentile, have to have player wash face to continue
+			- Going backwards when getting more dirty will have to wash again
+			- When 0f, player would need to grab towel and can't get dirty 
+			- Player must grab a towel to finish the night 
+			- When hit the min or max of bar, the art bar stops it
+	- Insane Bar:
+		- Gradually goes down, washing face brings it up more 
+		- Every 25% a guraentee event happens at random 
+		- No Max 
+	- Make a testing Hud for each 25% 
+		- Dirty Bar
+		- Insane Bar 
+
+# Step 6:
 - Create anitmations + Interactable for objects:
 	- 🗸 4 Doors (Closets, back door, side door) (Opening/Closing) 
 	- Sink cabnets (Opening/Closing) 
@@ -68,8 +85,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- toilet (to flush)
 	- Sink Faucet (on/off)
 	- Light Switch (on/off)
+	- Hud Bars 
 	
-# Step 6:
+# Step 7:
 - Make classes:
 	- Plumber (Good with Pipes and Bathroom Tools)
 	- Alchemist (Makes potions out of shampoos and other chemicals )

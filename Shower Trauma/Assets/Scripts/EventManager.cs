@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+
+    ShowerManager ShowerManagerScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        ShowerManagerScript = GetComponent<ShowerManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void test()
     {
-        
+        Debug.Log(ShowerManagerScript.DirtyMeterValue);
+        Debug.Log(ShowerManagerScript.InsanityMeterValue);
     }
+
 }
