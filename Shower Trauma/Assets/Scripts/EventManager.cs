@@ -7,6 +7,16 @@ public class EventManager : MonoBehaviour
 
     ShowerManager ShowerManagerScript;
 
+    // [percentages of event changers]
+    public float HigherChancePercentage = 10f; //changes one event value
+    public float LowerChancePercentage = 5f; //changes two event values
+
+    //[percentages of events happening]
+    public float InstanceEventChance = 50f;
+    public float SmallEventChance = 25f;
+    public float BigEventChance = 15f;
+    public float LevelChangingEventChance = 10f;
+
     void Start()
     {
         ShowerManagerScript = GetComponent<ShowerManager>();

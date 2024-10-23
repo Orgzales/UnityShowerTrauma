@@ -44,22 +44,6 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 - 🗸 Washing face should decrease dirty level
 	- 🗸 Only able to do it if the shower is on
 	- 🗸 Decrese by 20 for now 
-- When washing face, random events have a chance of happening
-	- Based off of insane level
-	- Instance Events (instant)
-		- Creppy jumpscares
-		- Sound events 
-	- Small Events (small)
-		- Hidden monsters that run when looked at
-		- Small interaction with no punishment 
-	- Interactable Events (Medium)
-		- Monsters that need to hid from
-		- Need to mash a button to not die
-		- Turning shower off/On to survive
-	- Level Changing Events (Level Changing)
-		- Moving into a different area through closets 
-		- Getting transfer to a whole new area for a events
-		- Monsters that need to be constantly monitored 
 - Event System:
 	- Insane Value determines if event happens or not:
 		- If event happens, Dirty value determines what kind of event happens
@@ -87,6 +71,22 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 
 	
 # Step 5:
+- When washing face, random events have a chance of happening
+	- Based off of insane level
+	- Instance Events (instant)
+		- Creppy jumpscares
+		- Sound events 
+	- Small Events (small)
+		- Hidden monsters that run when looked at
+		- Small interaction with no punishment 
+	- Interactable Events (Medium)
+		- Monsters that need to hid from
+		- Need to mash a button to not die
+		- Turning shower off/On to survive
+	- Level Changing Events (Level Changing)
+		- Moving into a different area through closets 
+		- Getting transfer to a whole new area for a events
+		- Monsters that need to be constantly monitored 
 - Create Advance Dirty and Insane Bar
 	- Dirty Bar:
 		- Start at 100f, min is 0f, max is 200f
