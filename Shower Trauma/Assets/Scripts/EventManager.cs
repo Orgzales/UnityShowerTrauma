@@ -12,10 +12,10 @@ public class EventManager : MonoBehaviour
     public float LowerChancePercentage = 5f; //changes two event values
 
     //[percentages of events happening]
-    public float PercentileOneEventChance = 50f;
-    public float nChance = 25f;
-    public float PercentileThreeEventChance = 15f;
-    public float PercentileFourEventChance = 10f;
+    public float InstanceEventChance = 50f;
+    public float SmallEventChance = 25f;
+    public float MediumEventChance = 15f;
+    public float LevelChangingEventChance = 10f;
 
     public float DaysPassed = 0f;
 
@@ -34,8 +34,8 @@ public class EventManager : MonoBehaviour
     {
         float floatInsaneAmount = ShowerManagerScript.InsanityMeterValue;
         //get the # Days 1-7 week 
-        float RandomNumber = Random.Range(1f, 100f);
-        if (RandomNumber <= floatInsaneAmount + DaysPassed)
+        float RandomChance = Random.Range(1f, 100f);
+        if (RandomChance <= floatInsaneAmount + DaysPassed)
         {
             GetEventLevel();
         }
@@ -68,11 +68,38 @@ public class EventManager : MonoBehaviour
     public void PercentileOneEvent() //Small Jumpscare or Creapy Quick Event
     {
         Debug.Log("Event(1) Happened");
+        float InstanceEvent = 100 - InstanceEventChance + HigherChancePercentage; // 100 - 50 + 10 = 60
+        float SmallEvent = 100 - SmallEventChance; // 100 - 25 = 75
+        float MediumEvent = 100 - MediumEventChance - LowerChancePercentage; // 100 - 15 - 5 = 80
+        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; // 100 - 10 - 5 = 85
+
+        float RandomChance = Random.Range(1f, 100f);
+        if (RandomChance <= InstanceEvent) // EX: 50-1, <= 60%
+        {
+            Debug.Log("Instance Event Happened");
+        }
+        else if (InstanceEvent < RandomChance && RandomChance <= SmallEvent) //EX: 51-75 <= 25%
+        {
+            Debug.Log("Small Event Happened");
+        }
+        else if (SmallEvent < RandomChance && RandomChance <= MediumEvent) //EX: 76-80 <= 15%
+        {
+            Debug.Log("Medium Event Happened");
+        }
+        else if (MediumEvent < RandomChance && RandomChance <= LevelChangingEvent) //EX: 81-85 <= 10%
+        {
+            Debug.Log("Level Changing Event Happened");
+        }
     }
 
     public void PercentileTwoEvent() //small encounter, 1 click or look away
     {
         Debug.Log("Event(2) Happened");
+        float InstanceEvent = 100 - InstanceEventChance; // 100 - 50 = 50
+        float SmallEvent = 100 - SmallEventChance + HigherChancePercentage; // 100 - 25 + 10 = 35
+        float MediumEvent = 100 - MediumEventChance - LowerChancePercentage; // 100 - 15 - 5 = 80
+        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; // 100 - 10 - 5 = 85
+
     }
 
     public void PercentileThreeEvent() //Big Encounter, Near Death or Death
