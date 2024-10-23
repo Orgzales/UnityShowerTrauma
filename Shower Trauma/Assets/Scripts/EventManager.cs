@@ -12,10 +12,12 @@ public class EventManager : MonoBehaviour
     public float LowerChancePercentage = 5f; //changes two event values
 
     //[percentages of events happening]
-    public float InstanceEventChance = 50f;
-    public float SmallEventChance = 25f;
-    public float BigEventChance = 15f;
-    public float LevelChangingEventChance = 10f;
+    public float PercentileOneEventChance = 50f;
+    public float nChance = 25f;
+    public float PercentileThreeEventChance = 15f;
+    public float PercentileFourEventChance = 10f;
+
+    public float DaysPassed = 0f;
 
     void Start()
     {
@@ -32,9 +34,8 @@ public class EventManager : MonoBehaviour
     {
         float floatInsaneAmount = ShowerManagerScript.InsanityMeterValue;
         //get the # Days 1-7 week 
-        int Day = 2; //TESTING
         float RandomNumber = Random.Range(1f, 100f);
-        if (RandomNumber <= floatInsaneAmount + Day)
+        if (RandomNumber <= floatInsaneAmount + DaysPassed)
         {
             GetEventLevel();
         }
@@ -47,41 +48,41 @@ public class EventManager : MonoBehaviour
         float Dirty_Amount = ShowerManagerScript.DirtyMeterValue;
         if (Dirty_Amount >= 25f) //
         {
-            InstanceEvent();
+            PercentileOneEvent(); //instance
         }
         else if (Dirty_Amount >= 50f)
         {
-            SmallEvent();
+            PercentileTwoEvent();
         }
         else if (Dirty_Amount >= 75f)
         {
-            BigEvent();
+            PercentileThreeEvent();
         }
         else if (Dirty_Amount >= 100f)
         {
-            LevelChangingEvent();
+            PercentileFourEvent();
         }
 
     }
 
-    public void InstanceEvent() //Small Jumpscare or Creapy Quick Event
+    public void PercentileOneEvent() //Small Jumpscare or Creapy Quick Event
     {
-        Debug.Log("Instance Event Happened");
+        Debug.Log("Event(1) Happened");
     }
 
-    public void SmallEvent() //small encounter, 1 click or look away
+    public void PercentileTwoEvent() //small encounter, 1 click or look away
     {
-        Debug.Log("Small Event Happened");
+        Debug.Log("Event(2) Happened");
     }
 
-    public void BigEvent() //Big Encounter, Near Death or Death
+    public void PercentileThreeEvent() //Big Encounter, Near Death or Death
     {
-        Debug.Log("Big Event Happened");
+        Debug.Log("Event(3) Happened");
     }
 
-    public void LevelChangingEvent() //Event that changes the level
+    public void PercentileFourEvent() //Event that changes the level
     {
-        Debug.Log("Level Changing Event Happened");
+        Debug.Log("Event(4) Happened");
     }
 
 
