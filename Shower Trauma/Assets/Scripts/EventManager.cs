@@ -71,7 +71,7 @@ public class EventManager : MonoBehaviour
         float InstanceEvent = InstanceEventChance + HigherChancePercentage; //50 + 10 = 60%
         float SmallEvent = SmallEventChance; //25 = 25%
         float MediumEvent = MediumEventChance - LowerChancePercentage; //15 - 5 = 10%
-        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; //10 - 5 = 5%
+        float LevelChangingEvent = LevelChangingEventChance - LowerChancePercentage; //10 - 5 = 5%
 
         float RandomChance = Random.Range(1f, 100f);
         if (RandomChance <= InstanceEvent) // EX: 1-60, <= 60%
@@ -95,21 +95,82 @@ public class EventManager : MonoBehaviour
     public void PercentileTwoEvent() //small encounter, 1 click or look away
     {
         Debug.Log("Event(2) Happened");
-        float InstanceEvent = 100 - InstanceEventChance; // 100 - 50 = 50
-        float SmallEvent = 100 - SmallEventChance + HigherChancePercentage; // 100 - 25 + 10 = 35
-        float MediumEvent = 100 - MediumEventChance - LowerChancePercentage; // 100 - 15 - 5 = 80
-        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; // 100 - 10 - 5 = 85
+        float InstanceEvent = InstanceEventChance - LowerChancePercentage; //45 = 45%
+        float SmallEvent = SmallEventChance + HigherChancePercentage; //25 + 10 = 35%
+        float MediumEvent = MediumEventChance; //15 = 15%
+        float LevelChangingEvent = LevelChangingEventChance - LowerChancePercentage; //10 - 5 = 5%
 
+        float RandomChance = Random.Range(1f, 100f);
+        if (RandomChance <= InstanceEvent) // EX: 1-45, <= 45%
+        {
+            Debug.Log("Instance Event Happened");
+        }
+        else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 46-80 <= 35%
+        {
+            Debug.Log("Small Event Happened");
+        }
+        else if (RandomChance <= SmallEvent + MediumEvent) // EX: 81-95 <= 15%
+        {
+            Debug.Log("Medium Event Happened");
+        }
+        else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 96-100 <= 5%
+        {
+            Debug.Log("Level Changing Event Happened");
+        }
     }
 
     public void PercentileThreeEvent() //Big Encounter, Near Death or Death
     {
         Debug.Log("Event(3) Happened");
+        float InstanceEvent = InstanceEventChance - LowerChancePercentage; //45 = 45%
+        float SmallEvent = SmallEventChance - LowerChancePercentage; //25 - 5 = 20%
+        float MediumEvent = MediumEventChance + HigherChancePercentage; //15 + 10 = 25%
+        float LevelChangingEvent = LevelChangingEventChance; //10 = 10%
+
+        float RandomChance = Random.Range(1f, 100f);
+        if (RandomChance <= InstanceEvent) // EX: 1-45, <= 45%
+        {
+            Debug.Log("Instance Event Happened");
+        }
+        else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 46-65 <= 20%
+        {
+            Debug.Log("Small Event Happened");
+        }
+        else if (RandomChance <= SmallEvent + MediumEvent) // EX: 66-90 <= 25%
+        {
+            Debug.Log("Medium Event Happened");
+        }
+        else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 91-100 <= 10%
+        {
+            Debug.Log("Level Changing Event Happened");
+        }
     }
 
     public void PercentileFourEvent() //Event that changes the level
     {
         Debug.Log("Event(4) Happened");
+        float InstanceEvent = InstanceEventChance; //50 = 50%
+        float SmallEvent = SmallEventChance - LowerChancePercentage; //25 - 5 = 20%
+        float MediumEvent = MediumEventChance - LowerChancePercentage; //15 - 5 = 10%
+        float LevelChangingEvent = LevelChangingEventChance + HigherChancePercentage; //10 + 10 = 20%
+
+        float RandomChance = Random.Range(1f, 100f);
+        if (RandomChance <= InstanceEvent) // EX: 1-50, <= 50%
+        {
+            Debug.Log("Instance Event Happened");
+        }
+        else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 51-70 <= 20%
+        {
+            Debug.Log("Small Event Happened");
+        }
+        else if (RandomChance <= SmallEvent + MediumEvent) // EX: 71-80 <= 10%
+        {
+            Debug.Log("Medium Event Happened");
+        }
+        else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 81-100 <= 20%
+        {
+            Debug.Log("Level Changing Event Happened");
+        }
     }
 
 
