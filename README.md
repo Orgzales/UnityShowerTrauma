@@ -28,14 +28,13 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 			- 🗸 Turning the shower on/off
 	- 🗸 Debug everything for logs 
 # Step 3:
-- Make Interatiable system
+- 🗸 Make Interatiable system
 	- 🗸 Make a hud with dot in middle for now
 	- 🗸 Whenever player looks at interactable object, display hud text and outline
 	- 🗸 Each object will have a script object 
 		- 🗸 When pressing shower, should wash face for step 4
 		- 🗸 When looking at shower, should turn on/off 
 			- 🗸 This will start the cleaning count down 
-	
 # Step 4:
 - 🗸 Create Script for Blink mechanic
 	- 🗸 Make object overlay for pressing "E"
@@ -44,46 +43,43 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 - 🗸 Washing face should decrease dirty level
 	- 🗸 Only able to do it if the shower is on
 	- 🗸 Decrese by 20 for now 
-- Event System:
-	- Insane Value determines if event happens or not:
+- 🗸 Event System:
+	- 🗸 Insane Value determines if event happens or not:
 		- 🗸 If event happens, Dirty value determines what kind of event happens
-		- Based on Dirty Value Percentile
+		- 🗸 Based on Dirty Value Percentile
 			- 🗸 100%-75% (percentile 1):
-				- Higher Chance: Instance Events
-				- Lower Chance: Level changing Event & Medium events
-			- 75%-50% (percentile 2): 
-				- Higher Chance: Small events 
-				- Lower Chance: Level Chaning Event & Instance Events
-			- 50%-25% (percentile 3):
-				- Higher Chnace: Medium Events 
-				- Lower Chance: instance and small events 
-			- 25%-0%:
-				- Higher chance: Level changing events 
-				- lower: small and medium 
-		- Chance of each event happening by default:
-			- Instance Event: 50%
-			- Small event: 25%
-			- Medium: 15%
-			- Level Changing: 10%
-			
-	- Number of Days based on chance rate of what kind of event is happening
-		- Chance = Days + insane rate chance 
-
-	
+				- 🗸 Higher Chance: Instance Events
+				- 🗸 Lower Chance: Level changing Event & Medium events
+			- 🗸 75%-50% (percentile 2): 
+				- 🗸 Higher Chance: Small events 
+				- 🗸 Lower Chance: Level Chaning Event & Instance Events
+			- 🗸 50%-25% (percentile 3):
+				- 🗸 Higher Chnace: Medium Events 
+				- 🗸 Lower Chance: instance and small events 
+			- 🗸 25%-0%:
+				- 🗸 Higher chance: Level changing events 
+				- 🗸 lower: small and medium 
+		- 🗸 Chance of each event happening by default:
+			- 🗸 Instance Event: 50%
+			- 🗸 Small event: 25%
+			- 🗸 Medium: 15%
+			- 🗸 Level Changing: 10%	
+	- 🗸 Number of Days based on chance rate of what kind of event is happening
+		- 🗸 Chance = Days + insane rate chance 
 # Step 5:
-- When washing face, random events have a chance of happening
-	- Based off of insane level
-	- Instance Events (instant)
+- 🗸 When washing face, random events have a chance of happening
+	- 🗸 Based off of Dirty level
+	- 🗸 Instance Events (instant)
 		- Creppy jumpscares
 		- Sound events 
-	- Small Events (small)
+	- 🗸 Small Events (small)
 		- Hidden monsters that run when looked at
 		- Small interaction with no punishment 
-	- Interactable Events (Medium)
+	- 🗸 Interactable Events (Medium)
 		- Monsters that need to hid from
 		- Need to mash a button to not die
 		- Turning shower off/On to survive
-	- Level Changing Events (Level Changing)
+	- 🗸 Level Changing Events (Level Changing)
 		- Moving into a different area through closets 
 		- Getting transfer to a whole new area for a events
 		- Monsters that need to be constantly monitored 

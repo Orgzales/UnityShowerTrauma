@@ -38,6 +38,11 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= floatInsaneAmount + DaysPassed)
         {
             GetEventLevel();
+            Debug.Log("$$EVENT HAPPENED$$");
+        }
+        else
+        {
+            Debug.Log("$$No Event Happened$$");
         }
 
     }

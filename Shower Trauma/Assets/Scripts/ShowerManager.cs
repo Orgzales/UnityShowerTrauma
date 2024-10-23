@@ -7,7 +7,7 @@ public class ShowerManager : MonoBehaviour
     public GameObject ShowerBounds;
     public float DirtyMeterValue = 100f;
 
-    public float CleanRate = 0.5f; //Down: Getting clean
+    public float CleanRate = 0.25f; //Down: Getting clean
     public float DirtyRate = 0.1f; //UP : getting dirty
 
     public float InsanityMeterValue = 0f;
@@ -148,8 +148,10 @@ public class ShowerManager : MonoBehaviour
     }
     public void WashingFace()
     {
-        DirtyMeterValue -= 20f;
-        InsanityMeterValue += 20f;
+        float RandomCleanAmount = Random.Range(1f, 10f);
+        float RandomInsaneAmount = Random.Range(5f, 10f);
+        DirtyMeterValue -= RandomCleanAmount;
+        InsanityMeterValue += RandomInsaneAmount;
         Debug.Log("After Wash Value: " + DirtyMeterValue);
     }
 
