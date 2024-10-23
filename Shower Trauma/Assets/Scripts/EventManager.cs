@@ -68,25 +68,25 @@ public class EventManager : MonoBehaviour
     public void PercentileOneEvent() //Small Jumpscare or Creapy Quick Event
     {
         Debug.Log("Event(1) Happened");
-        float InstanceEvent = 100 - InstanceEventChance + HigherChancePercentage; // 100 - 50 + 10 = 60
-        float SmallEvent = 100 - SmallEventChance; // 100 - 25 = 75
-        float MediumEvent = 100 - MediumEventChance - LowerChancePercentage; // 100 - 15 - 5 = 80
-        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; // 100 - 10 - 5 = 85
+        float InstanceEvent = InstanceEventChance + HigherChancePercentage; //50 + 10 = 60%
+        float SmallEvent = SmallEventChance; //25 = 25%
+        float MediumEvent = MediumEventChance - LowerChancePercentage; //15 - 5 = 10%
+        float LevelChangingEvent = 100 - LevelChangingEventChance - LowerChancePercentage; //10 - 5 = 5%
 
         float RandomChance = Random.Range(1f, 100f);
-        if (RandomChance <= InstanceEvent) // EX: 50-1, <= 60%
+        if (RandomChance <= InstanceEvent) // EX: 1-60, <= 60%
         {
             Debug.Log("Instance Event Happened");
         }
-        else if (InstanceEvent < RandomChance && RandomChance <= SmallEvent) //EX: 51-75 <= 25%
+        else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 61-85 <= 25%
         {
             Debug.Log("Small Event Happened");
         }
-        else if (SmallEvent < RandomChance && RandomChance <= MediumEvent) //EX: 76-80 <= 15%
+        else if (RandomChance <= SmallEvent + MediumEvent) // EX: 86-95 <= 10%
         {
             Debug.Log("Medium Event Happened");
         }
-        else if (MediumEvent < RandomChance && RandomChance <= LevelChangingEvent) //EX: 81-85 <= 10%
+        else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 96-100 <= 5%
         {
             Debug.Log("Level Changing Event Happened");
         }

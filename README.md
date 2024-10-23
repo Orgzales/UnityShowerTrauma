@@ -48,7 +48,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- Insane Value determines if event happens or not:
 		- 🗸 If event happens, Dirty value determines what kind of event happens
 		- Based on Dirty Value Percentile
-			- 100%-75% (percentile 1):
+			- 🗸 100%-75% (percentile 1):
 				- Higher Chance: Instance Events
 				- Lower Chance: Level changing Event & Medium events
 			- 75%-50% (percentile 2): 
