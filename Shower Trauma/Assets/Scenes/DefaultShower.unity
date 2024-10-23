@@ -755,6 +755,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405097e9406284419e02110ea31a1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HigherChancePercentage: 10
+  LowerChancePercentage: 5
+  InstanceEventChance: 50
+  SmallEventChance: 25
+  MediumEventChance: 15
+  LevelChangingEventChance: 10
+  DaysPassed: 0
 --- !u!4 &1980288234
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,7 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowerBounds: {fileID: 7544045342114265210}
   DirtyMeterValue: 100
-  CleanRate: 0.5
+  CleanRate: 0.25
   DirtyRate: 0.1
   InsanityMeterValue: 0
   InsaneRate: 0.2
@@ -1167,6 +1174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405097e9406284419e02110ea31a1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HigherChancePercentage: 10
+  LowerChancePercentage: 5
+  InstanceEventChance: 50
+  SmallEventChance: 25
+  MediumEventChance: 15
+  LevelChangingEventChance: 10
+  DaysPassed: 0
 --- !u!1001 &8174066229983705250
 PrefabInstance:
   m_ObjectHideFlags: 0
