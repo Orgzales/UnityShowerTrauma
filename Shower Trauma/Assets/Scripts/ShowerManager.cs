@@ -152,7 +152,9 @@ public class ShowerManager : MonoBehaviour
         float RandomInsaneAmount = Random.Range(5f, 10f);
         DirtyMeterValue -= RandomCleanAmount;
         InsanityMeterValue += RandomInsaneAmount;
-        Debug.Log("After Wash Value: " + DirtyMeterValue);
+        // Debug.Log("After Wash Value: " + DirtyMeterValue);
+        Debug.Log("Random Clean Amount: " + RandomCleanAmount);
+        Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
     }
 
 
