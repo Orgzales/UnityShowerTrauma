@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowerManager : MonoBehaviour
 {
@@ -8,11 +9,12 @@ public class ShowerManager : MonoBehaviour
     public float DirtyMeterValue = 100f;
 
     //~~~~~~~~~~~~~~Dirty Meter~~~~~~~~~~~~~~
+    public Image DirtyBar;
     public float CleanRate = 0.25f; //Down: Getting clean
     public float DirtyRate = 0.1f; //UP : getting dirty
     public float[] DirtyPercentile = { 75f, 50f, 25f, 0f }; //add more values later
     public bool[] PassedDirtyPercentile = { false, false, false, false }; //add more values later
-
+    public int CurrentPercentile = 0;
     //~~~~~~~~~~~~~~Dirty Meter~~~~~~~~~~~~~~
     //~~~~~~~~~~~~~~Insane Meter~~~~~~~~~~~~~~
 
@@ -77,6 +79,7 @@ public class ShowerManager : MonoBehaviour
                 if (DirtyMeterValue > 0)
                 {
                     DirtyMeterValue -= CleanRate;
+                    DirtyBar.fillAmount -= CleanRate;
                     if (DirtyMeterValue < 0f)
                     {
                         DirtyMeterValue = 0f;
@@ -165,6 +168,11 @@ public class ShowerManager : MonoBehaviour
         // Debug.Log("After Wash Value: " + DirtyMeterValue);
         Debug.Log("Random Clean Amount: " + RandomCleanAmount);
         Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
+    }
+
+    public void CheckPercentilePhase()
+    {
+
     }
 
 
