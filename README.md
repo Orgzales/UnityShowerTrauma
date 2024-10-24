@@ -100,6 +100,8 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- Insane Bar 
 
 # Step 6:
+- Create more advance Bathroom 
+	- Opening for events to take place 
 - Create anitmations + Interactable for objects:
 	- 🗸 4 Doors (Closets, back door, side door) (Opening/Closing) 
 	- Sink cabnets (Opening/Closing) 
