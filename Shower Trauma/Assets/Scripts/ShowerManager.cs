@@ -82,45 +82,8 @@ public class ShowerManager : MonoBehaviour
                 if (DirtyMeterValue > 0)
                 {
                     DirtyMeterValue -= CleanRate;
-                    // NormalizedValue = (DirtyMeterValue - minValue) / (maxValue - minValue);
-                    // float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
+                    UpdateDirtyBar();
 
-                    if (DirtyMeterValue >= 75f) //percentile 1
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
-                        DirtyBar.fillAmount = NormalizedValue;
-                    }
-                    else if (DirtyMeterValue < 75f)
-                    {
-                        DirtyBar.fillAmount = 0f;
-                    }
-                    if (DirtyMeterValue >= 50f && DirtyMeterValue < 75f) //percentile 2
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 50f) / 25f;
-                        DirtyBar2.fillAmount = NormalizedValue;
-                    }
-                    else if (DirtyMeterValue < 50f)
-                    {
-                        DirtyBar2.fillAmount = 0f;
-                    }
-                    if (DirtyMeterValue >= 25f && DirtyMeterValue < 50f) //percentile 3
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 25f) / 25f;
-                        DirtyBar3.fillAmount = NormalizedValue;
-                    }
-                    else if (DirtyMeterValue < 25f)
-                    {
-                        DirtyBar3.fillAmount = 0f;
-                    }
-                    if (DirtyMeterValue >= 0f && DirtyMeterValue < 25f) //percentile 4
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 0f) / 25f;
-                        DirtyBar4.fillAmount = NormalizedValue;
-                    }
-                    else if (DirtyMeterValue < 0f)
-                    {
-                        DirtyBar4.fillAmount = 0f;
-                    }
                     if (DirtyMeterValue < 0f)
                     {
                         DirtyMeterValue = 0f;
@@ -154,27 +117,7 @@ public class ShowerManager : MonoBehaviour
                 if (DirtyMeterValue < 200)
                 {
                     DirtyMeterValue += DirtyRate;
-
-                    if (DirtyMeterValue >= 75f) //percentile 1
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
-                        DirtyBar.fillAmount = NormalizedValue;
-                    }
-                    if (DirtyMeterValue >= 50f && DirtyMeterValue < 75f) //percentile 2
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 50f) / 25f;
-                        DirtyBar2.fillAmount = NormalizedValue;
-                    }
-                    if (DirtyMeterValue >= 25f && DirtyMeterValue < 50f) //percentile 3
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 25f) / 25f;
-                        DirtyBar3.fillAmount = NormalizedValue;
-                    }
-                    if (DirtyMeterValue >= 0f && DirtyMeterValue < 25f) //percentile 4
-                    {
-                        float NormalizedValue = (DirtyMeterValue - 0f) / 25f;
-                        DirtyBar4.fillAmount = NormalizedValue;
-                    }
+                    UpdateDirtyBar();
 
                     if (DirtyMeterValue < 0f)
                     {
@@ -232,9 +175,62 @@ public class ShowerManager : MonoBehaviour
         Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
     }
 
-    public void CheckPercentilePhase()
+    // NormalizedValue = (DirtyMeterValue - minValue) / (maxValue - minValue);
+    // float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
+    public void UpdateDirtyBar()
     {
-
+        if (DirtyMeterValue >= 75f) //percentile 1
+        {
+            float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
+            DirtyBar.fillAmount = NormalizedValue;
+        }
+        else if (DirtyMeterValue < 75f) // for jumps down
+        {
+            DirtyBar.fillAmount = 0f;
+        }
+        else if (DirtyMeterValue > 100f) // for jumps up
+        {
+            DirtyBar.fillAmount = 1f;
+        }
+        if (DirtyMeterValue >= 50f && DirtyMeterValue < 75f) //percentile 2
+        {
+            float NormalizedValue = (DirtyMeterValue - 50f) / 25f;
+            DirtyBar2.fillAmount = NormalizedValue;
+        }
+        else if (DirtyMeterValue < 50f) // for jumps down
+        {
+            DirtyBar2.fillAmount = 0f;
+        }
+        else if (DirtyMeterValue > 75f) // for jumps up
+        {
+            DirtyBar2.fillAmount = 1f;
+        }
+        if (DirtyMeterValue >= 25f && DirtyMeterValue < 50f) //percentile 3
+        {
+            float NormalizedValue = (DirtyMeterValue - 25f) / 25f;
+            DirtyBar3.fillAmount = NormalizedValue;
+        }
+        else if (DirtyMeterValue < 25f) // for jumps down
+        {
+            DirtyBar3.fillAmount = 0f;
+        }
+        else if (DirtyMeterValue > 50f) // for jumps up
+        {
+            DirtyBar3.fillAmount = 1f;
+        }
+        if (DirtyMeterValue >= 0f && DirtyMeterValue < 25f) //percentile 4
+        {
+            float NormalizedValue = (DirtyMeterValue - 0f) / 25f;
+            DirtyBar4.fillAmount = NormalizedValue;
+        }
+        else if (DirtyMeterValue < 0f) // for jumps down
+        {
+            DirtyBar4.fillAmount = 0f;
+        }
+        else if (DirtyMeterValue > 25f) // for jumps up
+        {
+            DirtyBar4.fillAmount = 1f;
+        }
     }
 
 
