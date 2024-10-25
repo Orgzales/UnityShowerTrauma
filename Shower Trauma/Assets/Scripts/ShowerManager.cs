@@ -10,6 +10,9 @@ public class ShowerManager : MonoBehaviour
 
     //~~~~~~~~~~~~~~Dirty Meter~~~~~~~~~~~~~~
     public Image DirtyBar;
+    public Image DirtyBar2;
+    public Image DirtyBar3;
+    public Image DirtyBar4;
     public float CleanRate = 0.25f; //Down: Getting clean
     public float DirtyRate = 0.1f; //UP : getting dirty
     public float[] DirtyPercentile = { 75f, 50f, 25f, 0f }; //add more values later
@@ -79,7 +82,30 @@ public class ShowerManager : MonoBehaviour
                 if (DirtyMeterValue > 0)
                 {
                     DirtyMeterValue -= CleanRate;
-                    DirtyBar.fillAmount -= CleanRate;
+                    // NormalizedValue = (DirtyMeterValue - minValue) / (maxValue - minValue);
+                    // float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
+
+                    if (DirtyMeterValue >= 75f) //percentile 1
+                    {
+                        float NormalizedValue = (DirtyMeterValue - 75f) / 25f;
+                        DirtyBar.fillAmount = NormalizedValue;
+                    }
+                    if (DirtyMeterValue >= 50f && DirtyMeterValue < 75f) //percentile 2
+                    {
+                        float NormalizedValue = (DirtyMeterValue - 50f) / 25f;
+                        DirtyBar2.fillAmount = NormalizedValue;
+                    }
+                    if (DirtyMeterValue >= 25f && DirtyMeterValue < 50f) //percentile 3
+                    {
+                        float NormalizedValue = (DirtyMeterValue - 25f) / 25f;
+                        DirtyBar3.fillAmount = NormalizedValue;
+                    }
+                    if (DirtyMeterValue >= 0f && DirtyMeterValue < 25f) //percentile 4
+                    {
+                        float NormalizedValue = (DirtyMeterValue - 0f) / 25f;
+                        DirtyBar4.fillAmount = NormalizedValue;
+                    }
+
                     if (DirtyMeterValue < 0f)
                     {
                         DirtyMeterValue = 0f;
