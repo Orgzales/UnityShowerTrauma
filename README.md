@@ -85,7 +85,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- Monsters that need to be constantly monitored 
 - Create Advance Dirty and Insane Bar
 	- Dirty Bar:
-		- Start at 100f, min is 0f, max is 200f
+		- 🗸 Start at 100f, min is 0f, max is 200f
 		- Every 25 percentile, have to have player wash face to continue
 			- Going backwards when getting more dirty will have to wash again
 			- When 0f, player would need to grab towel and can't get dirty 
@@ -95,9 +95,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- Gradually goes down, washing face brings it up more 
 		- Every 25% a guraentee event happens at random 
 		- No Max 
-	- Make a testing Hud for each 25% 
-		- Dirty Bar
-		- Insane Bar 
+	- 🗸 Make a testing Hud for each 25% 
+		- 🗸 Dirty Bar
+		- 🗸 Insane Bar 
 
 # Step 6:
 - Create more advance Bathroom 
