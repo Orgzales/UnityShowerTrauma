@@ -81,6 +81,7 @@ public class ShowerManager : MonoBehaviour
             {
                 if (DirtyMeterValue > 0)
                 {
+                    //put if percentile statement here, idk I'm tired
                     DirtyMeterValue -= CleanRate;
                     UpdateDirtyBar();
 
@@ -106,6 +107,10 @@ public class ShowerManager : MonoBehaviour
         }
 
     }
+
+
+
+
 
     private IEnumerator CountUp()
     {
