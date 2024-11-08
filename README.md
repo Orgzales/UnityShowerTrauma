@@ -119,3 +119,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- Mentalist (one with the mind to fight off evils)
 	- Pharmacist (Understand the Meds/Drugs and medical equipment) 
 	
+	
+# Event Ideas
+-Instance
+-Small
+-Medium
+-Level Changing 
