@@ -125,3 +125,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 -Small
 -Medium
 -Level Changing 
+
+# Notes for later
+	Run if statments through boolean []
+	Set Ifs on wash face mechanic later 
