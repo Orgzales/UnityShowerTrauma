@@ -89,7 +89,7 @@ public class ShowerManager : MonoBehaviour
                         DirtyMeterValue = DirtyPercentile[CurrentPercentile];
                         CurrentPercentile++;
                     }
-                    else if (DirtyMeterValue >= && PassedDirtyPercentile[CurrentPercentile])
+                    else if (DirtyMeterValue >= DirtyPercentile[CurrentPercentile] && PassedDirtyPercentile[CurrentPercentile])
                     {
                         PassedDirtyPercentile[CurrentPercentile] = false;
                         CurrentPercentile--;
