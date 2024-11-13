@@ -83,8 +83,18 @@ public class ShowerManager : MonoBehaviour
                 {
                     //put if percentile statement here, idk I'm tired
                     DirtyMeterValue -= CleanRate;
-                    UpdateDirtyBar();
 
+                    if (DirtyMeterValue <= DirtyPercentile[CurrentPercentile] && !PassedDirtyPercentile[CurrentPercentile])
+                    {
+                        DirtyMeterValue = DirtyPercentile[CurrentPercentile];
+                        CurrentPercentile++;
+                    }
+                    else if (DirtyMeterValue >= && PassedDirtyPercentile[CurrentPercentile])
+                    {
+                        PassedDirtyPercentile[CurrentPercentile] = false;
+                        CurrentPercentile--;
+                    }
+                    UpdateDirtyBar();
                     if (DirtyMeterValue < 0f)
                     {
                         DirtyMeterValue = 0f;
