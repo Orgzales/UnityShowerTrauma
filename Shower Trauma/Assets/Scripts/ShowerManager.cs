@@ -89,11 +89,7 @@ public class ShowerManager : MonoBehaviour
                         DirtyMeterValue = DirtyPercentile[CurrentPercentile];
                         CurrentPercentile++;
                     }
-                    else if (DirtyMeterValue >= DirtyPercentile[CurrentPercentile] && PassedDirtyPercentile[CurrentPercentile])
-                    {
-                        PassedDirtyPercentile[CurrentPercentile] = false;
-                        CurrentPercentile--;
-                    }
+
                     UpdateDirtyBar();
                     if (DirtyMeterValue < 0f)
                     {
@@ -132,6 +128,13 @@ public class ShowerManager : MonoBehaviour
                 if (DirtyMeterValue < 200)
                 {
                     DirtyMeterValue += DirtyRate;
+
+                    if (DirtyMeterValue >= DirtyPercentile[CurrentPercentile] && PassedDirtyPercentile[CurrentPercentile])
+                    {
+                        PassedDirtyPercentile[CurrentPercentile] = false;
+                        CurrentPercentile--;
+                    }
+
                     UpdateDirtyBar();
 
                     if (DirtyMeterValue < 0f)
