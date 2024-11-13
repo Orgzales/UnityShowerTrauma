@@ -87,7 +87,6 @@ public class ShowerManager : MonoBehaviour
                     if (DirtyMeterValue <= DirtyPercentile[CurrentPercentile] && !PassedDirtyPercentile[CurrentPercentile])
                     {
                         DirtyMeterValue = DirtyPercentile[CurrentPercentile];
-                        CurrentPercentile++;
                     }
 
                     UpdateDirtyBar();
@@ -183,14 +182,22 @@ public class ShowerManager : MonoBehaviour
     }
     public void WashingFace()
     {
+        if (DirtyMeterValue == DirtyPercentile[CurrentPercentile])
+        {
+            PassedDirtyPercentile[CurrentPercentile] = true;
+            CurrentPercentile++;
+        }
+        else
+        {
+            float RandomCleanAmount = Random.Range(1f, 10f);
+            float RandomInsaneAmount = Random.Range(5f, 10f);
+            DirtyMeterValue -= RandomCleanAmount;
+            InsanityMeterValue += RandomInsaneAmount;
 
-        float RandomCleanAmount = Random.Range(1f, 10f);
-        float RandomInsaneAmount = Random.Range(5f, 10f);
-        DirtyMeterValue -= RandomCleanAmount;
-        InsanityMeterValue += RandomInsaneAmount;
-        // Debug.Log("After Wash Value: " + DirtyMeterValue);
-        Debug.Log("Random Clean Amount: " + RandomCleanAmount);
-        Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
+            // Debug.Log("After Wash Value: " + DirtyMeterValue);
+            Debug.Log("Random Clean Amount: " + RandomCleanAmount);
+            Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
+        }
     }
 
     // NormalizedValue = (DirtyMeterValue - minValue) / (maxValue - minValue);
