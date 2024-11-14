@@ -126,12 +126,17 @@ public class ShowerManager : MonoBehaviour
             {
                 if (DirtyMeterValue < 200)
                 {
+                    int CheckNUM = CurrentPercentile; //Change later
                     DirtyMeterValue += DirtyRate;
-
-                    if (DirtyMeterValue >= DirtyPercentile[CurrentPercentile] && PassedDirtyPercentile[CurrentPercentile])
+                    if (CheckNUM != 0)
                     {
-                        PassedDirtyPercentile[CurrentPercentile] = false;
+                        CheckNUM -= 1;
+                    }
+
+                    if (DirtyMeterValue >= DirtyPercentile[CheckNUM] && PassedDirtyPercentile[CheckNUM])
+                    {
                         CurrentPercentile--;
+                        PassedDirtyPercentile[CurrentPercentile] = false;
                     }
 
                     UpdateDirtyBar();
