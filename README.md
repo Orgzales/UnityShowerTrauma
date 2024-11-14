@@ -86,11 +86,11 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 - Create Advance Dirty and Insane Bar
 	- Dirty Bar:
 		- 🗸 Start at 100f, min is 0f, max is 200f
-		- Every 25 percentile, have to have player wash face to continue
-			- Going backwards when getting more dirty will have to wash again
+		- 🗸 Every 25 percentile, have to have player wash face to continue
+			- 🗸 Going backwards when getting more dirty will have to wash again
 			- When 0f, player would need to grab towel and can't get dirty 
 			- Player must grab a towel to finish the night 
-			- When hit the min or max of bar, the art bar stops it
+			- 🗸 When hit the min or max of bar, the art bar stops it
 	- Insane Bar:
 		- Gradually goes down, washing face brings it up more 
 		- Every 25% a guraentee event happens at random 
