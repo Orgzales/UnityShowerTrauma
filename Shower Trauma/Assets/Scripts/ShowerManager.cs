@@ -21,6 +21,11 @@ public class ShowerManager : MonoBehaviour
     //~~~~~~~~~~~~~~Dirty Meter~~~~~~~~~~~~~~
     //~~~~~~~~~~~~~~Insane Meter~~~~~~~~~~~~~~
 
+    public Image InsaneBar;
+    public Image InsaneBar2;
+    public Image InsaneBar3;
+    public Image InsaneBar4;
+
     public float InsanityMeterValue = 0f;
     public float InsaneRate = 0.2f; //Up
     public float[] InsanePercentile = { 0f, 25f, 50f, 75f, 100f, 125f, 150f, 175f, 200f, 300f }; //add more values later
@@ -104,6 +109,9 @@ public class ShowerManager : MonoBehaviour
                     {
                         InsanityMeterValue = 0f;
                     }
+                    UpdateInsaneBar();
+
+
                     Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
                 }
             }
@@ -260,6 +268,62 @@ public class ShowerManager : MonoBehaviour
         else if (DirtyMeterValue > 25f) // for jumps up
         {
             DirtyBar4.fillAmount = 1f;
+        }
+    }
+
+    public void UpdateInsaneBar()
+    {
+        if (InsanityMeterValue >= 0f && InsanityMeterValue < 25f) //percentile 1
+        {
+            float NormalizedValue = (InsanityMeterValue - 0f) / 25f;
+            InsaneBar.fillAmount = NormalizedValue;
+        }
+        else if (InsanityMeterValue < 0f) // for jumps down
+        {
+            InsaneBar.fillAmount = 0f;
+        }
+        else if (InsanityMeterValue > 25f) // for jumps up
+        {
+            InsaneBar.fillAmount = 1f;
+        }
+        if (InsanityMeterValue >= 25f && InsanityMeterValue < 50f) //percentile 2
+        {
+            float NormalizedValue = (InsanityMeterValue - 25f) / 25f;
+            InsaneBar2.fillAmount = NormalizedValue;
+        }
+        else if (InsanityMeterValue < 25f) // for jumps down
+        {
+            InsaneBar2.fillAmount = 0f;
+        }
+        else if (InsanityMeterValue > 50f) // for jumps up
+        {
+            InsaneBar2.fillAmount = 1f;
+        }
+        if (InsanityMeterValue >= 50f && InsanityMeterValue < 75f) //percentile 3
+        {
+            float NormalizedValue = (InsanityMeterValue - 50f) / 25f;
+            InsaneBar3.fillAmount = NormalizedValue;
+        }
+        else if (InsanityMeterValue < 50f) // for jumps down
+        {
+            InsaneBar3.fillAmount = 0f;
+        }
+        else if (InsanityMeterValue > 75f) // for jumps up
+        {
+            InsaneBar3.fillAmount = 1f;
+        }
+        if (InsanityMeterValue >= 75f && InsanityMeterValue < 100f) //percentile 4
+        {
+            float NormalizedValue = (InsanityMeterValue - 75f) / 25f;
+            InsaneBar4.fillAmount = NormalizedValue;
+        }
+        else if (InsanityMeterValue < 75f) // for jumps down
+        {
+            InsaneBar4.fillAmount = 0f;
+        }
+        else if (InsanityMeterValue > 100f) // for jumps up
+        {
+            InsaneBar4.fillAmount = 1f;
         }
     }
 
