@@ -1769,6 +1769,10 @@ MonoBehaviour:
   - 0
   PassedDirtyPercentile: 00000000
   CurrentPercentile: 0
+  InsaneBar: {fileID: 527024039}
+  InsaneBar2: {fileID: 686796308}
+  InsaneBar3: {fileID: 1300607815}
+  InsaneBar4: {fileID: 255559953}
   InsanityMeterValue: 0
   InsaneRate: 0.2
   InsanePercentile:
