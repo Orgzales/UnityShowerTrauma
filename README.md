@@ -110,7 +110,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- toilet (to flush)
 	- Sink Faucet (on/off)
 	- Light Switch (on/off)
-	- Hud Bars 
+	- 🗸 Hud Bars 
 	
 # Step 7:
 - Make classes:
