@@ -111,8 +111,14 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- Sink Faucet (on/off)
 	- Light Switch (on/off)
 	- 🗸 Hud Bars 
+
+# Step 7: 
+- Make small event happen as example (Goblin)
+- Make medium event happen as example (Shark)
+- Make Large event happen as example (Dragon)
+- Make Level Changing event happen as example (Devil) 
 	
-# Step 7:
+# Step C:
 - Make classes:
 	- Plumber (Good with Pipes and Bathroom Tools)
 	- Alchemist (Makes potions out of shampoos and other chemicals )
