@@ -9,16 +9,26 @@ public class SmallEventExample : MonoBehaviour
     {
         Debug.Log("$$PeakingDoor$$");
     }
+    /// Plan
+    /// Make small goblin that peaking around door
+    /// if player makes contact with vector, goblin runs into door
+    /// Goblin object disappears
 
     public void Knocking()
     {
         Debug.Log("$$Knocking$$");
     }
 
+    /// Plan
+    /// Audio queue of knocking really loud and yelling
     public void Lightsoff()
     {
         Debug.Log("$$Lightsoff$$");
     }
+
+    /// Plan
+    /// Lights flicker off for player 
+    /// Need to make an nightlight so there is visabliltiy for player 
 
 
 }
