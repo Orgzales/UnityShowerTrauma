@@ -847,8 +847,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -974,8 +974,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294961542
-  m_fontColor: {r: 0.5235849, g: 0.9143699, b: 1, a: 1}
+    rgba: 4282268159
+  m_fontColor: {r: 1, g: 0.2216981, b: 0.24262798, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -992,8 +992,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2537,6 +2537,7 @@ MonoBehaviour:
   DirtyBar2: {fileID: 230157703}
   DirtyBar3: {fileID: 508640613}
   DirtyBar4: {fileID: 1977384722}
+  DirtyText: {fileID: 1260135603}
   CleanRate: 0.25
   DirtyRate: 0.1
   DirtyPercentile:
@@ -2550,6 +2551,7 @@ MonoBehaviour:
   InsaneBar2: {fileID: 686796308}
   InsaneBar3: {fileID: 1300607815}
   InsaneBar4: {fileID: 255559953}
+  InsaneText: {fileID: 1582321355}
   InsanityMeterValue: 0
   InsaneRate: 0.2
   InsanePercentile:
