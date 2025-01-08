@@ -86,7 +86,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public void WashFace()
     {
-        Debug.Log("Washing Face");
+        // Debug.Log("Washing Face");
         StartCoroutine(WashFaceRoutine());
     }
     private IEnumerator WashFaceRoutine()

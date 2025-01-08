@@ -43,12 +43,12 @@ public class InteractableManager : MonoBehaviour
         if (ShowerIsOn)
         {
             ShowerIsOn = false;
-            Debug.Log("Shower Turned Off");
+            // Debug.Log("Shower Turned Off");
         }
         else
         {
             ShowerIsOn = true;
-            Debug.Log("Shower Turned On");
+            // Debug.Log("Shower Turned On");
         }
     }
 
