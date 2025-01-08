@@ -55,7 +55,7 @@ public class ShowerManager : MonoBehaviour
         if (Shower.CompareTag("Player"))
         {
             IsInsideShower = true;
-            Debug.Log("Player entered Shower.");
+            // Debug.Log("Player entered Shower.");
             countdownCoroutine = StartCoroutine(Countdown());
             if (countupCoroutine != null)
             {
@@ -70,7 +70,7 @@ public class ShowerManager : MonoBehaviour
         if (Shower.CompareTag("Player"))
         {
             IsInsideShower = false;
-            Debug.Log("Player exited Shower.");
+            // Debug.Log("Player exited Shower.");
 
             if (countdownCoroutine != null)
             {
@@ -83,7 +83,7 @@ public class ShowerManager : MonoBehaviour
 
     private IEnumerator Countdown()
     {
-        Debug.Log($"Getting Clean and insane.");
+        // Debug.Log($"Getting Clean and insane.");
         while (IsInsideShower)// while inside the shower you get clean but go more insane 
         {
             if (IsShowerOn && ShowerStarted)
@@ -103,7 +103,7 @@ public class ShowerManager : MonoBehaviour
                     {
                         DirtyMeterValue = 0f;
                     }
-                    Debug.Log($"[IN SHOWER] Dirty Value: {DirtyMeterValue:F2}");
+                    // Debug.Log($"[IN SHOWER] Dirty Value: {DirtyMeterValue:F2}");
                 }
 
                 if (InsanityMeterValue < 200)
@@ -116,7 +116,7 @@ public class ShowerManager : MonoBehaviour
                     UpdateInsaneBar();
 
 
-                    Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
+                    // Debug.Log($"[IN SHOWER] Insanity Value: {InsanityMeterValue:F2}");
                 }
             }
             // Wait for 1 second 
@@ -133,7 +133,7 @@ public class ShowerManager : MonoBehaviour
     {
         if (ShowerStarted)
         {
-            Debug.Log("Getting More Dirty.");
+            // Debug.Log("Getting More Dirty.");
             while (!IsInsideShower)// while Outside the shower you get Dirty
             {
                 if (DirtyMeterValue < 200)
@@ -158,7 +158,7 @@ public class ShowerManager : MonoBehaviour
                         DirtyMeterValue = 0f;
                     }
 
-                    Debug.Log($"[OUT SHOWER] Dirty Value: {DirtyMeterValue:F2}");
+                    // Debug.Log($"[OUT SHOWER] Dirty Value: {DirtyMeterValue:F2}");
                 }
 
                 // Wait for 1 second 
@@ -172,17 +172,17 @@ public class ShowerManager : MonoBehaviour
         if (ShowerStarted == false)
         {
             ShowerStarted = true;
-            Debug.Log("Shower Started");
+            // Debug.Log("Shower Started");
         }
         if (IsShowerOn)
         {
             IsShowerOn = false;
-            Debug.Log("Shower Turned Off");
+            // Debug.Log("Shower Turned Off");
         }
         else
         {
             IsShowerOn = true;
-            Debug.Log("Shower Turned On");
+            // Debug.Log("Shower Turned On");
         }
     }
 
@@ -212,8 +212,8 @@ public class ShowerManager : MonoBehaviour
             InsanityMeterValue += RandomInsaneAmount;
 
             // Debug.Log("After Wash Value: " + DirtyMeterValue);
-            Debug.Log("Random Clean Amount: " + RandomCleanAmount);
-            Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
+            // Debug.Log("Random Clean Amount: " + RandomCleanAmount);
+            // Debug.Log("Random Insane Amount: " + RandomInsaneAmount);
         }
     }
 
