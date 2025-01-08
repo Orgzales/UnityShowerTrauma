@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShowerManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ShowerManager : MonoBehaviour
     public Image DirtyBar2;
     public Image DirtyBar3;
     public Image DirtyBar4;
+    public TextMeshProUGUI DirtyText;
     public float CleanRate = 0.25f; //Down: Getting clean
     public float DirtyRate = 0.1f; //UP : getting dirty
     public float[] DirtyPercentile = { 75f, 50f, 25f, 0f }; //add more values later
@@ -25,6 +27,7 @@ public class ShowerManager : MonoBehaviour
     public Image InsaneBar2;
     public Image InsaneBar3;
     public Image InsaneBar4;
+    public TextMeshProUGUI InsaneText;
 
     public float InsanityMeterValue = 0f;
     public float InsaneRate = 0.2f; //Up
@@ -43,7 +46,8 @@ public class ShowerManager : MonoBehaviour
 
     void Update()
     {
-
+        DirtyText.text = $"Dirty: {DirtyMeterValue:F2}%";
+        InsaneText.text = $"Insane: {InsanityMeterValue:F2}%";
     }
 
     private void OnTriggerEnter(Collider Shower)
