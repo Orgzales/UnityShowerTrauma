@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MediumEventExample : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public void Lightsturnoff()
     {
-        
+        Debug.Log("$$LightsTurnOff$$");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Windowopens()
     {
-        
+        Debug.Log("$$WindowOpens$$");
     }
+
 }

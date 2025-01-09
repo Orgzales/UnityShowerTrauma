@@ -21,9 +21,9 @@ public class SmallEventExample : MonoBehaviour
 
     /// Plan
     /// Audio queue of knocking really loud and yelling
-    public void Lightsoff()
+    public void LightsFlicker()
     {
-        Debug.Log("$$Lightsoff$$");
+        Debug.Log("$$LightFlicker$$");
     }
 
     /// Plan
