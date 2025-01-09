@@ -5,6 +5,24 @@ using UnityEngine;
 public class SmallEventExample : MonoBehaviour
 {
 
+
+    public void Random_pick()
+    {
+        int RandomEvent = Random.Range(1, 4);
+        switch (RandomEvent)
+        {
+            case 1:
+                PeakingDoor();
+                break;
+            case 2:
+                Knocking();
+                break;
+            case 3:
+                LightsFlicker();
+                break;
+        }
+    }
+
     public void PeakingDoor()
     {
         Debug.Log("$$PeakingDoor$$");
