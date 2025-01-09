@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class LargeEventSCript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Hide()
     {
-        
+        Debug.Log("$$Hide$$");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Dontlook()
     {
-        
+        Debug.Log("$$Don't look$$");
     }
 }
