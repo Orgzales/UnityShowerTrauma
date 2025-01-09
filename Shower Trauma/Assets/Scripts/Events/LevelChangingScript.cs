@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class LevelChangingScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public void forest()
     {
-        
+        Debug.Log("$$Forest$$");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void cave()
     {
-        
+        Debug.Log("$$Cave$$");
     }
+
+    public void secrettunnel()
+    {
+        Debug.Log("$$SecretTunnel$$");
+    }
+
 }
