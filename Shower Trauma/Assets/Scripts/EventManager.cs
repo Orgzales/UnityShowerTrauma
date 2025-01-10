@@ -7,6 +7,11 @@ public class EventManager : MonoBehaviour
     //Use $$Example$$ to find logs in the console
     ShowerManager ShowerManagerScript;
 
+    SmallEventExample SmallEventScript;
+    mediumeventexample mediumeventsscript;
+    largeeventexample largeeventsscript;
+    levelchangeeventexample levelchangeeventsscript;
+
     // [percentages of event changers]
     public float HigherChancePercentage = 10f; //changes one event value
     public float LowerChancePercentage = 5f; //changes two event values
@@ -19,11 +24,6 @@ public class EventManager : MonoBehaviour
 
     public float DaysPassed = 0f;
 
-    // Event Scripts here 
-    Smalleventexample smalleventsscript;
-    mediumeventexample mediumeventsscript;
-    largeeventexample largeeventsscript;
-    levelchangeeventexample levelchangeeventsscript;
 
 
     void Start()
