@@ -19,6 +19,13 @@ public class EventManager : MonoBehaviour
 
     public float DaysPassed = 0f;
 
+    // Event Scripts here 
+    Smallevents SmalleventEventScript;
+    MediumEvents MediumEventScript;
+    LargeEvents LargeEventScript;
+    LevelChangingEvents LevelChangingEventScript;
+
+
     void Start()
     {
         ShowerManagerScript = GetComponent<ShowerManager>();
