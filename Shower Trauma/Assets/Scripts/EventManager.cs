@@ -8,9 +8,9 @@ public class EventManager : MonoBehaviour
     ShowerManager ShowerManagerScript;
 
     SmallEventExample SmallEventScript;
-    mediumeventexample mediumeventsscript;
-    largeeventexample largeeventsscript;
-    levelchangeeventexample levelchangeeventsscript;
+    MediumEventExample MediumEventScript;
+    LargeEventExample LargeEventScript;
+    LevelChangingExample LevelChangingEventScript;
 
     // [percentages of event changers]
     public float HigherChancePercentage = 10f; //changes one event value

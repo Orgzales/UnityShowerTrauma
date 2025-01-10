@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelChangingScript : MonoBehaviour
+public class LevelChangingExample : MonoBehaviour
 {
 
     public void forest()

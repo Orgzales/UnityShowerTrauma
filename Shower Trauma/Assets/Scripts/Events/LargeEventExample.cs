@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LargeEventSCript : MonoBehaviour
+public class LargeEventExample : MonoBehaviour
 {
     public void Hide()
     {
