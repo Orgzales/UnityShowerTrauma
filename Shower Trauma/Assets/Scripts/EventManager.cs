@@ -89,18 +89,22 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= InstanceEvent) // EX: 1-60, <= 60%
         {
             Debug.Log("$$Instance Event Happened$$");
+            SmallEventScript.Random_pick();
         }
         else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 61-85 <= 25%
         {
             Debug.Log("$$Small Event Happened$$");
+            MediumEventScript.Random_pick();
         }
         else if (RandomChance <= SmallEvent + MediumEvent) // EX: 86-95 <= 10%
         {
             Debug.Log("$$Medium Event Happened$$");
+            LargeEventScript.Random_pick();
         }
         else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 96-100 <= 5%
         {
             Debug.Log("$$Level Changing Event Happened$$");
+            LevelChangingEventScript.Random_pick();
         }
     }
 
