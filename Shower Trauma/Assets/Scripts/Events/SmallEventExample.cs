@@ -6,8 +6,8 @@ public class SmallEventExample : MonoBehaviour
 {
 
     //test delete later
-    public gameobject Door;
-    public gameobject Goblin;
+    public GameObject Door;
+    public GameObject Goblin;
 
 
     public void Random_pick()
