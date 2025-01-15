@@ -5,6 +5,10 @@ using UnityEngine;
 public class SmallEventExample : MonoBehaviour
 {
 
+    //test delete later
+    public gameobject Door;
+    public gameobject Goblin;
+
 
     public void Random_pick()
     {
@@ -25,6 +29,7 @@ public class SmallEventExample : MonoBehaviour
 
     public void PeakingDoor()
     {
+        Goblin.SetActive(true);
         Debug.Log("$$PeakingDoor$$");
     }
     /// Plan
