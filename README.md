@@ -24,6 +24,6 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 			- Things that appear only after a unquie event 
 # Step 3:
 	- Create test assets for now till we get them from blender
-		- Small: Short and black smog around it with red eyes 
+		- 🗸 Small: Short and black smog around it with red eyes 
 		- Medium: Creepy figure in the closet 
 		- Large: Poison fog fills the rooms 
