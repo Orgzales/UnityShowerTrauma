@@ -13,7 +13,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- Rename scripts debugs in event manager 
 	- Get events testing correctly on insane and dirty meter 
 	- Create more events to test randomness
-	- Create test assets for now till we get them from blender
+
 # Step 2:
 	- Create a pull manager script where I can pull all the items from the scene
 		- Main focus: 
@@ -22,3 +22,8 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 			- Items that only show up when you reach a certain point
 		- rare items: 
 			- Things that appear only after a unquie event 
+# Step 3:
+	- Create test assets for now till we get them from blender
+		- Small: Short and black smog around it with red eyes 
+		- Medium: Creepy figure in the closet 
+		- Large: Poison fog fills the rooms 
