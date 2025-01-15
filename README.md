@@ -14,3 +14,11 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 	- Get events testing correctly on insane and dirty meter 
 	- Create more events to test randomness
 	- Create test assets for now till we get them from blender
+# Step 2:
+	- Create a pull manager script where I can pull all the items from the scene
+		- Main focus: 
+			- Doors, windows, lights, mirror (all the stuff that will always be there)
+		- Some focus: 
+			- Items that only show up when you reach a certain point
+		- rare items: 
+			- Things that appear only after a unquie event 
