@@ -1,0 +1,19 @@
+Scene: A knight that is facing in a middle of a battle 
+
+Start: In the bathroom a sword in stone is there and the player tries to pull it 
+- Once pulled the player will enter one of the 4 doors and face a challenge
+- Some of these challenges ca n aid in the game or have an ending
+-after each challenge the player will keep a rune that can call the sword 
+
+- Challenge 1: Surviving a battle - Player must stay alive till the end
+- Challenge 2: Guarding a gate - The player must guard teh gate with his life and not allow a single soul go through
+- Challenge 3: Defeat the demon - The player must go head to head with a demon and slay it to return to his kingdome
+- Challenge 4: Finding the traitor - Somewhere among the ranks there is a killer for the king, you must find who it is. If wrong, you take his place
+
+If the player loses a challenge, the rune will crack, after three times it will shatter and the player can no longer follow the knight ending.
+
+After each challenge is done, the plater rune will light up with a symbol.
+Once each symbol is done and they call the door once again, they will have a magical door appear and they will spawn in a one v one with the privious knight. 
+
+If the player loses the main challenge - the game ends
+If the player wins, he is rewarded with the game "knight's ending" screen shot 
