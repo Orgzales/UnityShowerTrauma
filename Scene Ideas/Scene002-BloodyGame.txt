@@ -1,0 +1,10 @@
+Build up: the charater will pick up a glass shard and if they keep it will occastionally see a girl in the mirror on the other side 
+
+Once the player see the girl 3 times, it will come out of the mirror introducting themselves as bloody maria a small demon child girl
+
+They will want to play and there will be 3 games:
+Connect 4, tictatoe, and pong
+If the player beats maria -> she will cry and go back into the mirror
+
+if the player lets maria wins -> they will be taken to the mirror world
+
