@@ -27,3 +27,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 		- 🗸 Small: Short and black smog around it with red eyes 
 		- Medium: Creepy figure in the closet 
 		- Large: Poison fog fills the rooms 
+		
+# Step 4: 
+	- Create test script for level changes
+		- Use sopme of the examples from Events.endings folder
