@@ -1,0 +1,10 @@
+Start- Player will enter a canyon fight one aon one against a undefeatable enemy
+
+Go though different phases of reaction time key presses
+
+Phase one: one key per 1 seonds
+phase two: two keys per 1sec
+phase three: three keys per sec
+finakl phase: 5 keys per sec
+
+If the player can beat the boss, he gets the anime award ending 
