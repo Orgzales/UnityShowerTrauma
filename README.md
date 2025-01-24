@@ -31,3 +31,9 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 # Step 4: 
 	- Create test script for level changes
 		- Use sopme of the examples from Events.endings folder
+		
+# Step 5:
+	- Make inventory:
+		- Ability to drop and grab items 
+		- Make UI for player (4-5 space) 
+		- Make manager for identifying what is in player's inventory next level 
