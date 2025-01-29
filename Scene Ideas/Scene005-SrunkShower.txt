@@ -1,0 +1,3 @@
+Start: If the player looks at the gnome for too long, the next time they wash their face they will shrink in size
+
+when the player shrinks, they will have to fight a flood or be washed away in  the pipes which then they need to fight the rats 
