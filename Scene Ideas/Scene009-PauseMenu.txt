@@ -1,0 +1,3 @@
+Player keeps pressing the pause menu back and fourth, the mission text will slowly go down
+
+If the player goes through enough times and presses the esc button to reveal a new button that takes them to a secret level 
