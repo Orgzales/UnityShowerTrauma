@@ -27,10 +27,22 @@ public class SmallEventExample : MonoBehaviour
         }
     }
 
+    Animator GoblinAnimator;
+
     public void PeakingDoor()
     {
+        //Goblin animation start hear 
+        GoblinAnimator = GetComponent<Animator>();
+        
+        //goblin is active and opens the door slightly
         Goblin.SetActive(true);
-        Debug.Log("$$PeakingDoor$$");
+        
+        //ORION: LEFT OFF HERE
+
+        //if player sees goblin, goblin hides and closes door
+        
+        
+
     }
     /// Plan
     /// Make small goblin that peaking around door

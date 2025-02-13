@@ -35,7 +35,7 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 # Step 5:
 	- Make inventory:
 		- Ability to drop and grab items 
-		- Make UI for player (4-5 space) 
+		- 🗸 Make UI for player (4-5 space) 
 		- Make manager for identifying what is in player's inventory next level 
 		- Make items travel to next levels 
 		- Make item manager 
