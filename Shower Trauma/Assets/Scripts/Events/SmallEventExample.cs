@@ -12,6 +12,7 @@ public class SmallEventExample : MonoBehaviour
 
     public UnityEvent onInteraction;
 
+
     public void Random_pick()
     {
         // int RandomEvent = Random.Range(1, 4);
@@ -36,6 +37,11 @@ public class SmallEventExample : MonoBehaviour
 
     public void PeakingDoor()
     {
+
+        if (Goblin == null) Debug.LogError("Goblin GameObject is not assigned!");
+        if (Door == null) Debug.LogError("Door GameObject is not assigned!");
+        if (GoblinAnimator == null) Debug.LogError("Goblin Animator not found!");
+        if (DoorAnimator == null) Debug.LogError("Door Animator not found!");
         //Goblin animation start hear 
         GoblinAnimator = GetComponent<Animator>();
         DoorAnimator = GetComponent<Animator>();
@@ -45,7 +51,7 @@ public class SmallEventExample : MonoBehaviour
         GoblinAnimator.Play("GoblinStart", 0, 0.0f);
         
 
-        //if player sees goblin, goblin hides and closes door
+        // if player sees goblin, goblin hides and closes door
         
         
 
