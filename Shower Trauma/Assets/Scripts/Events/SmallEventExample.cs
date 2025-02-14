@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SmallEventExample : MonoBehaviour
 {
@@ -9,8 +8,6 @@ public class SmallEventExample : MonoBehaviour
     //test delete later
     public GameObject Door;
     public GameObject Goblin;
-
-    public UnityEvent onInteraction;
 
 
     public void Random_pick()
@@ -38,12 +35,13 @@ public class SmallEventExample : MonoBehaviour
     public void PeakingDoor()
     {
         //Goblin animation start hear 
-        GoblinAnimator = GetComponent<Animator>();
-        DoorAnimator = GetComponent<Animator>();
+        GoblinAnimator = Goblin.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();
         //goblin is active and opens the door slightly
         Goblin.SetActive(true);
         DoorAnimator.Play("GoblinOpen", 0, 0.0f);
         GoblinAnimator.Play("GoblinStart", 0, 0.0f);
+        Debug.Log("$$PeakingDoor$$");
         
 
         // if player sees goblin, goblin hides and closes door
