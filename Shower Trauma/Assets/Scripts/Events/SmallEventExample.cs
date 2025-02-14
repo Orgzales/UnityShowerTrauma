@@ -40,7 +40,7 @@ public class SmallEventExample : MonoBehaviour
         //goblin is active and opens the door slightly
         Goblin.SetActive(true);
         DoorAnimator.Play("GoblinOpen", 0, 0.0f);
-        GoblinAnimator.Play("GoblinStart", 0, 0.0f);
+        GoblinAnimator.Play("Goblinstart", 0, 0.0f);
         Debug.Log("$$PeakingDoor$$");
         
 
