@@ -7,10 +7,10 @@ public class EventManager : MonoBehaviour
     //Use $$Example$$ to find logs in the console
     ShowerManager ShowerManagerScript;
 
-    SmallEventExample SmallEventScript;
-    MediumEventExample MediumEventScript;
-    LargeEventExample LargeEventScript;
-    LevelChangingExample LevelChangingEventScript;
+    SmallEventExample SmallEventExample;
+    MediumEventExample MediumEventExample;
+    LargeEventExample LargeEventExample;
+    LevelChangingExample LevelEventExample;
 
     // [percentages of event changers]
     public float HigherChancePercentage = 10f; //changes one event value
@@ -89,22 +89,22 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= InstanceEvent) // EX: 1-60, <= 60%
         {
             Debug.Log("$$Instance Event Happened$$");
-            SmallEventScript.Random_pick();
+            SmallEventExample;.Random_pick();
         }
         else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 61-85 <= 25%
         {
             Debug.Log("$$Small Event Happened$$");
-            MediumEventScript.Random_pick();
+            MediumEventExample;.Random_pick();
         }
         else if (RandomChance <= SmallEvent + MediumEvent) // EX: 86-95 <= 10%
         {
             Debug.Log("$$Medium Event Happened$$");
-            LargeEventScript.Random_pick();
+            LargeEventExample;.Random_pick();
         }
         else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 96-100 <= 5%
         {
             Debug.Log("$$Level Changing Event Happened$$");
-            LevelChangingEventScript.Random_pick();
+            LevelEventExample;.Random_pick();
         }
     }
 
@@ -120,22 +120,22 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= InstanceEvent) // EX: 1-45, <= 45%
         {
             Debug.Log("$$Instance Event Happened$$");
-            SmallEventScript.Random_pick();
+            SmallEventExample;.Random_pick();
         }
         else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 46-80 <= 35%
         {
             Debug.Log("$$Small Event Happened$$");
-            MediumEventScript.Random_pick();
+            MediumEventExample;.Random_pick();
         }
         else if (RandomChance <= SmallEvent + MediumEvent) // EX: 81-95 <= 15%
         {
             Debug.Log("$$Medium Event Happened$$");
-            LargeEventScript.Random_pick();
+            LargeEventExample;.Random_pick();
         }
         else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 96-100 <= 5%
         {
             Debug.Log("$$Level Changing Event Happened$$");
-            LevelChangingEventScript.Random_pick();
+            LevelEventExample;.Random_pick();
         }
     }
 
@@ -151,22 +151,22 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= InstanceEvent) // EX: 1-45, <= 45%
         {
             Debug.Log("$$Instance Event Happened$$");
-            SmallEventScript.Random_pick();
+            SmallEventExample;.Random_pick();
         }
         else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 46-65 <= 20%
         {
             Debug.Log("$$Small Event Happened$$");
-            MediumEventScript.Random_pick();
+            MediumEventExample;.Random_pick();
         }
         else if (RandomChance <= SmallEvent + MediumEvent) // EX: 66-90 <= 25%
         {
             Debug.Log("$$Medium Event Happened$$");
-            LargeEventScript.Random_pick();
+            LargeEventExample;.Random_pick();
         }
         else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 91-100 <= 10%
         {
             Debug.Log("$$Level Changing Event Happened$$");
-            LevelChangingEventScript.Random_pick();
+            LevelEventExample;.Random_pick();
         }
     }
 
@@ -182,22 +182,22 @@ public class EventManager : MonoBehaviour
         if (RandomChance <= InstanceEvent) // EX: 1-50, <= 50%
         {
             Debug.Log("$$Instance Event Happened$$");
-            SmallEventScript.Random_pick();
+            SmallEventExample;.Random_pick();
         }
         else if (RandomChance <= InstanceEvent + SmallEvent) // EX: 51-70 <= 20%
         {
             Debug.Log("$$Small Event Happened$$");
-            MediumEventScript.Random_pick();
+            MediumEventExample;.Random_pick();
         }
         else if (RandomChance <= SmallEvent + MediumEvent) // EX: 71-80 <= 10%
         {
             Debug.Log("$$Medium Event Happened$$");
-            LargeEventScript.Random_pick();
+            LargeEventExample;.Random_pick();
         }
         else if (RandomChance <= MediumEvent + LevelChangingEvent) // EX: 81-100 <= 20%
         {
             Debug.Log("$$Level Changing Event Happened$$");
-            LevelChangingEventScript.Random_pick();
+            LevelEventExample;.Random_pick();
         }
     }
 

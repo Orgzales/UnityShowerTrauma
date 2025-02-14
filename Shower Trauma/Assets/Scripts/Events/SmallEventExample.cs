@@ -37,11 +37,6 @@ public class SmallEventExample : MonoBehaviour
 
     public void PeakingDoor()
     {
-
-        if (Goblin == null) Debug.LogError("Goblin GameObject is not assigned!");
-        if (Door == null) Debug.LogError("Door GameObject is not assigned!");
-        if (GoblinAnimator == null) Debug.LogError("Goblin Animator not found!");
-        if (DoorAnimator == null) Debug.LogError("Door Animator not found!");
         //Goblin animation start hear 
         GoblinAnimator = GetComponent<Animator>();
         DoorAnimator = GetComponent<Animator>();
