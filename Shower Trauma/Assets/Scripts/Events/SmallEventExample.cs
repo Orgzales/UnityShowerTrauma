@@ -42,7 +42,7 @@ public class SmallEventExample : MonoBehaviour
         DoorAnimator.Play("GoblinOpen", 0, 0.0f);
         GoblinAnimator.Play("Goblinstart", 0, 0.0f);
         Debug.Log("$$PeakingDoor$$");
-        
+        //ORION LEFT OFF HERE 
 
         // if player sees goblin, goblin hides and closes door
         
