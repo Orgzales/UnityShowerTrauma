@@ -3258,6 +3258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door: {fileID: 557482749}
   Goblin: {fileID: 366615161}
+  PlayerPOVController: {fileID: 8174066229983705251}
   GoblinSeen: 0
 --- !u!23 &8109363016021400806
 MeshRenderer:
@@ -3383,6 +3384,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5439e19026c8ee3488322b404f6a6424, type: 3}
+--- !u!20 &8174066229983705251 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8305923103134736070, guid: 5439e19026c8ee3488322b404f6a6424, type: 3}
+  m_PrefabInstance: {fileID: 8174066229983705250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8309833466291482891
 MeshFilter:
   m_ObjectHideFlags: 0
