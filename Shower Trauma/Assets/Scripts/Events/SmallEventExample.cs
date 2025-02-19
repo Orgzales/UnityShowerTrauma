@@ -16,9 +16,9 @@ public class SmallEventExample : MonoBehaviour
         int RandomEvent = 1; //Testing
         switch (RandomEvent)
         {
-            case 1:
+            case 1:             
                 PeakingDoor();
-                break;
+                break; 
             case 2:
                 Knocking(); 
                 break;
@@ -28,8 +28,8 @@ public class SmallEventExample : MonoBehaviour
         }
     }
 
-       Animator GoblinAnimator ;
-    Animator DoorAnimator ;
+    Animator GoblinAnimator;
+    Animator DoorAnimator;  
 
     public bool GoblinSeen = false;
     private bool hasPeaked = false;
@@ -38,7 +38,7 @@ public class SmallEventExample : MonoBehaviour
     public void PeakingDoor()
     {
         //Goblin animation start hear 
-        // If the goblin hasn't peaked yet
+        // If the goblin hasn't peaked 
 
         GoblinAnimator = Goblin.GetComponent<Animator>();
         DoorAnimator = Door.GetComponent<Animator>();    
@@ -75,6 +75,7 @@ public class SmallEventExample : MonoBehaviour
     {
  
 	}
+    
 
 	public void Start()
 	{
