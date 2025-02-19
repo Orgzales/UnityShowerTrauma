@@ -20,7 +20,7 @@ public class SmallEventExample : MonoBehaviour
                 PeakingDoor();
                 break;
             case 2:
-                Knocking();
+                Knocking(); 
                 break;
             case 3:
                 LightsFlicker();
@@ -28,16 +28,20 @@ public class SmallEventExample : MonoBehaviour
         }
     }
 
-    Animator GoblinAnimator;
-    Animator DoorAnimator;
+       Animator GoblinAnimator ;
+    Animator DoorAnimator ;
+
     public bool GoblinSeen = false;
     private bool hasPeaked = false;
     private bool hasHidden = false;
-
+ 
     public void PeakingDoor()
     {
         //Goblin animation start hear 
         // If the goblin hasn't peaked yet
+
+        GoblinAnimator = Goblin.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();    
         if (!hasPeaked)
         {
             Goblin.SetActive(true);
@@ -65,12 +69,18 @@ public class SmallEventExample : MonoBehaviour
             }
         }
 
-    }
+    } 
 
-void HideGoblin()
+    void HideGoblin() 
     {
-        Goblin.SetActive(false);
-    }
+ 
+	}
+
+	public void Start()
+	{
+		Random_pick();
+	}
+		
 
 
     public void Knocking()
