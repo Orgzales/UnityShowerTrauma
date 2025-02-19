@@ -8,7 +8,7 @@ public class SmallEventExample : MonoBehaviour
     //test delete later
     public GameObject Door;
     public GameObject Goblin;
-
+    public Camera PlayerPOVController;
 
     public void Random_pick()
     {
@@ -31,28 +31,47 @@ public class SmallEventExample : MonoBehaviour
     Animator GoblinAnimator;
     Animator DoorAnimator;
     public bool GoblinSeen = false;
+    private bool hasPeaked = false;
+    private bool hasHidden = false;
 
     public void PeakingDoor()
     {
         //Goblin animation start hear 
-        GoblinAnimator = Goblin.GetComponent<Animator>();
-        DoorAnimator = Door.GetComponent<Animator>();
-        //goblin is active and opens the door slightly
-        Goblin.SetActive(true);
-        DoorAnimator.Play("GoblinOpen", 0, 0.0f);
-        GoblinAnimator.Play("Goblinstart", 0, 0.0f);
-        Debug.Log("$$PeakingDoor$$");
-        //ORION LEFT OFF HERE 
+        // If the goblin hasn't peaked yet
+        if (!hasPeaked)
+        {
+            Goblin.SetActive(true);
+            DoorAnimator.Play("GoblinOpen", 0, 0.0f);
+            GoblinAnimator.Play("Goblinstart", 0, 0.0f);
+            Debug.Log("$$PeakingDoor$$");
 
+            hasPeaked = true;
+        }
         // if player sees goblin, goblin hides and closes door
-        
-        
+        if (Goblin.activeSelf && !hasHidden)
+        {
+            Vector3 screenPoint = PlayerPOVController.WorldToViewportPoint(Goblin.transform.position);
+            bool isInView = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
+
+            if (isInView)
+            {
+                // Play hide animation and close door
+                GoblinAnimator.Play("GoblinHide", 0, 0.0f);
+                DoorAnimator.Play("GoblinClose", 0, 0.0f);
+                Debug.Log("$$GoblinHides$$");
+
+                hasHidden = true;
+                Invoke("HideGoblin", 1.5f); // Adjust the delay to match the animation length
+            }
+        }
 
     }
-    /// Plan
-    /// Make small goblin that peaking around door
-    /// if player makes contact with vector, goblin runs into door
-    /// Goblin object disappears
+
+void HideGoblin()
+    {
+        Goblin.SetActive(false);
+    }
+
 
     public void Knocking()
     {
