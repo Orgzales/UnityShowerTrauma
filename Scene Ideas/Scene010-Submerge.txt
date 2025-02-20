@@ -1,0 +1,6 @@
+Start:
+The bathroom begins to fill up with water and the player must find a way to survive or stop the flooding
+
+Flush: If the player flushes the toilet they can stop the flood
+
+Survive: If the player keeps swimming, they will get cleaner but needs to reach the towel up high so they must wai t for the water to rise, while a water monster chases them. 
