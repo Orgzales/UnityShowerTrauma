@@ -69,6 +69,17 @@ public class SmallEventExample : MonoBehaviour
             }
         }
 
+        /*
+        GoblinAnimator = Goblin.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();
+        //goblin is active and opens the door slightly
+        Goblin.SetActive(true);
+        DoorAnimator.Play("GoblinOpen", 0, 0.0f);
+        GoblinAnimator.Play("Goblinstart", 0, 0.0f);
+        Debug.Log("$$PeakingDoor$$");
+        */
+
+
     } 
 
     void HideGoblin() 
