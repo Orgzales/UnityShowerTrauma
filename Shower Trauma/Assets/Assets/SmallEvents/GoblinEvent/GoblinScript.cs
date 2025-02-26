@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class GoblinScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Renderer GoblinRender;
+
+    private void Start()
     {
-        
+        GoblinRender = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (GoblinRender != null && IsVisibleFrom(Camera.main))
+        {
+            GoAway();
+        }
     }
+
+    private bool IsVisibleFrom(Camera cam)
+    {
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);
+        return GeometryUtility.TestPlanesAABB(planes, GoblinRender.bounds);
+    }
+
+    private void GoAway()
+    {
+        Debug.Log("RUNNING AWAY...");
+        gameObject.SetActive(false);
+    }
+
 }

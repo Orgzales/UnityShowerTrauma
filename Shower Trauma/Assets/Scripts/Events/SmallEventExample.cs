@@ -8,7 +8,6 @@ public class SmallEventExample : MonoBehaviour
     //test delete later
     public GameObject Door;
     public GameObject Goblin;
-    public Camera PlayerPOVController;
 
     public void Random_pick()
     {
@@ -41,15 +40,7 @@ public class SmallEventExample : MonoBehaviour
         GoblinAnimator.Play("Goblinstart", 0, 0.0f);
         Debug.Log("$$GoblinEvent$$");
     }
-
-
-
-	public void Start()
-	{
-		Random_pick();
-	}
 		
-
 
     public void Knocking()
     {
