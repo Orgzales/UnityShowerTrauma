@@ -5,10 +5,16 @@ using UnityEngine;
 public class GoblinScript : MonoBehaviour
 {
     private Renderer GoblinRender;
+    public GameObject Door;
+    public GameObject Goblin;
+    Animator GoblinAnimator;
+    Animator DoorAnimator;
 
     private void Start()
     {
         GoblinRender = GetComponent<Renderer>();
+        GoblinAnimator = Goblin.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();    
     }
 
     private void Update()
@@ -27,8 +33,9 @@ public class GoblinScript : MonoBehaviour
 
     private void GoAway()
     {
-        Debug.Log("RUNNING AWAY...");
-        gameObject.SetActive(false);
+        GoblinAnimator.Play("GoblinEnd", 0, 0.0f);
+        DoorAnimator.Play("GoblinClose", 0, 0.0f);
+        // gameObject.SetActive(false);
     }
 
 }
