@@ -562,6 +562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0f33e8294267540ab0e0c47cc47ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Door: {fileID: 557482749}
+  Goblin: {fileID: 366615161}
 --- !u!1 &435772754
 GameObject:
   m_ObjectHideFlags: 0
