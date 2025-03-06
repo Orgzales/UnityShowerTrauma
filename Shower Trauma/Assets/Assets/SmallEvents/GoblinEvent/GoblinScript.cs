@@ -10,9 +10,13 @@ public class GoblinScript : MonoBehaviour
     Animator GoblinAnimator;
     Animator DoorAnimator;
 
+
+
     private void Start()
     {
         GoblinRender = GetComponent<Renderer>(); 
+        GoblinAnimator = Goblin.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();   
     }
 
     private void Update()
@@ -31,10 +35,10 @@ public class GoblinScript : MonoBehaviour
 
     private void GoAway()
     {
-        GoblinAnimator = Goblin.GetComponent<Animator>();
-        DoorAnimator = Door.GetComponent<Animator>();   
-        GoblinAnimator.Play("GoblinEnd", 0, 0.0f);
-        DoorAnimator.Play("GoblinClose", 0, 0.0f);
+        
+        GoblinAnimator.Play("GoblinEnd", -1, 0.0f);
+        DoorAnimator.Play("GoblinClose", -1, 0.0f);
+
         Debug.Log($"$$GoblinLeaving$$");
         // gameObject.SetActive(false);
     }
