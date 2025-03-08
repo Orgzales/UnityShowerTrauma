@@ -9,10 +9,10 @@ In Shower Trauma, you play as a young child who is terrified of bathing due to a
 ## Plans To Do
 
 # Step 1: 
-	- Have prefab system with script childs ready 
-	- Clean up scripts (small medium Large Levelchanging)
-	- Rename scripts debugs in event manager 
-	- Get events testing correctly on insane and dirty meter 
+	- 🗸 Have prefab system with script childs ready 
+	- 🗸 Clean up scripts (small medium Large Levelchanging)
+	- 🗸 Rename scripts debugs in event manager 
+	- 🗸 Get events testing correctly on insane and dirty meter 
 	- Create more events to test randomness
 
 

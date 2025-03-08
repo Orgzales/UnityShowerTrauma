@@ -14,6 +14,7 @@ public class GoblinScript : MonoBehaviour
 
     private void Start()
     {
+        GoblinLeft = false;
         GoblinRender = GetComponent<Renderer>(); 
         GoblinAnimator = Goblin.GetComponent<Animator>();
         DoorAnimator = Door.GetComponent<Animator>();   
