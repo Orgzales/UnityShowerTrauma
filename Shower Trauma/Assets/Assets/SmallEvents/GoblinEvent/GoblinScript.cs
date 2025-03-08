@@ -10,6 +10,8 @@ public class GoblinScript : MonoBehaviour
     Animator GoblinAnimator;
     Animator DoorAnimator;
 
+    private bool GoblinLeft = false;
+
     private void Start()
     {
         GoblinRender = GetComponent<Renderer>(); 
@@ -19,9 +21,10 @@ public class GoblinScript : MonoBehaviour
 
     private void Update()
     {
-        if (GoblinRender != null && IsVisibleFrom(Camera.main))
+        if (!GoblinLeft && GoblinRender != null && IsVisibleFrom(Camera.main))
         {
-            GoAway();
+            GoblinLeft = true;
+            StartCoroutine(GoblinBeenSeen());  
         }
     }
 
@@ -31,14 +34,15 @@ public class GoblinScript : MonoBehaviour
         return GeometryUtility.TestPlanesAABB(planes, GoblinRender.bounds);
     }
 
-    private void GoAway()
+    private IEnumerator GoblinBeenSeen()
     {
-        //animator.SetTrigger("YourTriggerName");
-        GoblinAnimator.SetTrigger("ExitTrigger");
-        DoorAnimator.Play("GoblinClose", -1, 0.0f);
+        yield return new WaitForSeconds(1f); // Wait 1 second to wait for the player to see it
 
-        Debug.Log($"$$GoblinLeaving$$");
-        // gameObject.SetActive(false);
+        GoblinAnimator.Play("GoblinExit", 0, 0.0f);
+        DoorAnimator.Play("Door45Close", 0, 0.0f);
+
+        yield return new WaitForSeconds(2f);
+        Debug.Log("$$Goblin Gone$$");
+        Goblin.SetActive(false);  // Disable the Goblin
     }
-
 }

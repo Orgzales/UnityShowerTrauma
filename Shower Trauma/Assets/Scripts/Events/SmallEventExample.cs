@@ -36,8 +36,8 @@ public class SmallEventExample : MonoBehaviour
         DoorAnimator = Door.GetComponent<Animator>();    
 
         Goblin.SetActive(true);
-        DoorAnimator.Play("GoblinOpen", 0, 0.0f);
-        GoblinAnimator.SetTrigger("EnterTrigger");
+        DoorAnimator.Play("Door45Open", 0, 0.0f);
+        GoblinAnimator.Play("GoblinEnter", 0, 0.0f);
         Debug.Log("$$GoblinEvent$$");
     }
 		
