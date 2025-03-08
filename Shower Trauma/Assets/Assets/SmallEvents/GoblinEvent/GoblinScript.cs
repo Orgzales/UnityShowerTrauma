@@ -10,8 +10,6 @@ public class GoblinScript : MonoBehaviour
     Animator GoblinAnimator;
     Animator DoorAnimator;
 
-
-
     private void Start()
     {
         GoblinRender = GetComponent<Renderer>(); 
@@ -35,8 +33,8 @@ public class GoblinScript : MonoBehaviour
 
     private void GoAway()
     {
-        
-        GoblinAnimator.Play("GoblinEnd", -1, 0.0f);
+        //animator.SetTrigger("YourTriggerName");
+        GoblinAnimator.SetTrigger("ExitTrigger");
         DoorAnimator.Play("GoblinClose", -1, 0.0f);
 
         Debug.Log($"$$GoblinLeaving$$");
